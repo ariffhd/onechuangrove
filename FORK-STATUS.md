@@ -80,6 +80,23 @@ pending so nobody mistakes a partial pass for a finished, publish-ready site.
   created for One Chuan Grove before any registration form goes live** — this was not caught by
   the original Section 1 pass since it's a credential, not brand text.
 
+**showflat.html — full rewrite**
+- Head metadata, JSON-LD, sticky bar, hero, location/hours info cards, visible FAQ, and 3
+  bottom info-cards all updated. Removed fabricated amenityFeature/openingHours/sameAs from
+  JSON-LD. Unit Type dropdown used Thomson's real confirmed floor plan codes/sizes (BPS1/CP1/
+  DP1(L)/E1(L)) — replaced with generic bedroom-count options. Fixed a stray
+  `thomson-reserve-showflat` URL left in a JSON-LD answer.
+
+**contact.html — full rewrite**
+- JSON-LD dates, sticky bar, footer: standard fixes. Operating Hours block asserted specific
+  confirmed daily hours as fact — replaced with honest "to be confirmed".
+- **Found another landmine**: the embedded Google Maps iframe still pointed to Thomson Reserve's
+  actual real location (a specific Google Place ID + Upper Thomson coordinates) — the mechanical
+  pass had only swapped the URL's display-label text to "One Chuan Grove", not the underlying
+  pin. Replaced with a simple coordinate-based embed centred on Lorong Chuan MRT, explicitly
+  titled as approximate. **Any other page with an embedded map should be checked for the same
+  wrong-pin-right-label issue.**
+
 ## ⚠️ NOT done — needs manual content work, not find-replace
 
 1. **Same "$810M en bloc" / "1,268 units / 6 towers" narrative still appears in OTHER sections of
@@ -96,14 +113,15 @@ pending so nobody mistakes a partial pass for a finished, publish-ready site.
    `thomson-reserve-vs-jadescape.html`) are Thomson Reserve's topical-map cluster articles — real
    facts about a different location, each with their own JSON-LD still untouched. Per Section 5,
    Chuan Grove needs its own fresh topical map. Left in place, unlinked from anywhere new.
-4. **22 other HTML pages** (`floor-plan.html`, `contact.html`, `site-plan.html`, `gallery.html`,
+4. **20 other HTML pages** (`floor-plan.html`, `site-plan.html`, `gallery.html`,
    `location-map.html`, `stamp-duty.html`, `payment-scheme.html`, `housing-loan-information.html`,
-   `latest-updates.html`, `review.html`, `showflat.html`, `disclaimer.html`, `privacy-policy.html`,
-   `sitemap.html`, etc.) — only `index.html`, `developer.html`, `pricing.html` and `faq.html` have
-   been touched so far. Each has its own body copy, sticky top bar (still says "D20"/old preview
-   date on every untouched page), footer, and JSON-LD still carrying Thomson Reserve facts — and
-   each should be checked for its own hard-coded licence/account numbers **and its own Web3Forms
-   access_key if it has a lead-capture form**, not assumed identical to the pages already fixed.
+   `latest-updates.html`, `review.html`, `disclaimer.html`, `privacy-policy.html`, `sitemap.html`,
+   etc.) — only `index.html`, `developer.html`, `pricing.html`, `faq.html`, `showflat.html` and
+   `contact.html` have been touched so far. Each has its own body copy, sticky top bar (still
+   says "D20"/old preview date on every untouched page), footer, and JSON-LD still carrying
+   Thomson Reserve facts — and each should be checked for its own hard-coded licence/account
+   numbers, its own Web3Forms access_key if it has a lead-capture form, and any embedded Google
+   Maps iframe (see the wrong-pin finding above), not assumed identical to the pages already fixed.
 5. **YouTube channel link** in the footer (`youtube.com/@thomson-reserve`) — still points to
    Thomson Reserve's real channel; needs a real Chuan Grove channel or removal.
 6. Everything still marked `TBC`: TOP/launch date, GBP Place ID, social handles, NAP phone
@@ -112,7 +130,6 @@ pending so nobody mistakes a partial pass for a finished, publish-ready site.
 
 ## Suggested next step
 
-`showflat.html` and `contact.html` are natural next targets — both have lead-capture forms
-(check for their own Web3Forms access_key) and are high-visibility conversion pages. Check each
-new page's footer for its own hard-coded licence/account numbers as you go (see the
-C1555/762-333-930-4 finding above).
+`location-map.html` and `site-plan.html` are natural next targets — `location-map.html` likely
+has its own embedded map (check for the same wrong-pin issue found in contact.html) and probably
+the most Thomson-specific location narrative left (MRT lines, schools, nature reserve claims).
