@@ -45,15 +45,24 @@ pending so nobody mistakes a partial pass for a finished, publish-ready site.
   question replaced with a GLS-vs-en-bloc clarifying FAQ; no invented TOP year or 1km-school claim
 - Validated as parseable JSON (7 `@graph` nodes) — still needs a live Rich Results Test once deployed
 
+**index.html — Project Core section & developer.html — full rewrite**
+- Both now describe the real 2-way JV (Sing Holdings Residential 65% / Sunway Developments 35%)
+  with sourced track records, instead of Thomson's fabricated 3-way UOL/SingLand/CapitaLand
+  consortium. Fabricated Consultant Team (P&T Consultants, Eco Plan Asia, 2nd Edition, Lian Beng
+  Construction) replaced with honest "TBC" language rather than invented/misattributed firms.
+- **Found and fixed a landmine**: `developer.html`'s footer had its own hard-coded, DIFFERENT
+  fake licence number (C1555, issued 08 Jun 2026) and project account (762-333-930-4) — not the
+  same fake data as elsewhere, and not caught by the Section 1 mechanical pass since it's numbers,
+  not "Thomson Reserve" text. Now corrected to the real C1558 / 761-352-363-8. **This means every
+  other untouched page should be individually checked for its own hard-coded licence/account
+  numbers, not assumed safe just because the brand-name pass touched it.**
+
 ## ⚠️ NOT done — needs manual content work, not find-replace
 
-1. **Developer / Project Core section** (visible page content, not schema) — Thomson Reserve is
-   a 3-way JV (CapitaLand, UOL, Singapore Land — 3 logo files + 3 sub-cards + body copy). Chuan
-   Grove is a **2-way JV**. Needs a structural edit (remove a sub-card, swap logos/copy), not text
-   substitution. Same "$810M en bloc" / "1,268 units / 6 towers" narrative also still appears in:
-   Latest Updates feed, Artist's Impression intro, Timeline to Launch, Project Details table,
-   Connectivity intro, Investment Thesis section, Family & Lifestyle intro, Live Inventory Monitor,
-   Resource Hub — none of these have been touched yet.
+1. **Same "$810M en bloc" / "1,268 units / 6 towers" narrative still appears in OTHER sections of
+   index.html**: Latest Updates feed, Artist's Impression intro, Timeline to Launch, Project
+   Details table, Connectivity intro, Investment Thesis section, Family & Lifestyle intro, Live
+   Inventory Monitor, Resource Hub — none of these have been touched yet.
 2. **All images/PDFs** (`thomson-reserve-*.jpg/.png`, floor plan PDF, 3 developer logos) are
    Thomson Reserve's real marketing photos and competitors' real logos, still referenced by
    filename (now confusingly under the `onechuangrove.sg` domain). **Do not deploy with these
@@ -64,9 +73,14 @@ pending so nobody mistakes a partial pass for a finished, publish-ready site.
    `thomson-reserve-vs-jadescape.html`) are Thomson Reserve's topical-map cluster articles — real
    facts about a different location, each with their own JSON-LD still untouched. Per Section 5,
    Chuan Grove needs its own fresh topical map. Left in place, unlinked from anywhere new.
-4. **All 25 other HTML pages** (`developer.html`, `pricing.html`, `floor-plan.html`, `faq.html`,
-   `contact.html`, etc.) — only `index.html` has been touched so far. Each has its own body copy
-   and JSON-LD still carrying Thomson Reserve facts.
+4. **24 other HTML pages** (`pricing.html`, `floor-plan.html`, `faq.html`, `contact.html`,
+   `showflat.html`, `site-plan.html`, `gallery.html`, `location-map.html`, `stamp-duty.html`,
+   `payment-scheme.html`, `housing-loan-information.html`, `latest-updates.html`, `review.html`,
+   `disclaimer.html`, `privacy-policy.html`, `sitemap.html`, etc.) — only `index.html` and
+   `developer.html` have been touched so far. Each has its own body copy, sticky top bar (still
+   says "D20"/old preview date on every untouched page), footer, and JSON-LD still carrying
+   Thomson Reserve facts — and each should be checked for its own hard-coded licence/account
+   numbers per the finding above, not assumed identical to the other pages.
 5. **YouTube channel link** in the footer (`youtube.com/@thomson-reserve`) — still points to
    Thomson Reserve's real channel; needs a real Chuan Grove channel or removal.
 6. Everything still marked `TBC`: TOP/launch date, GBP Place ID, social handles, NAP phone
@@ -75,5 +89,7 @@ pending so nobody mistakes a partial pass for a finished, publish-ready site.
 
 ## Suggested next step
 
-`developer.html` and the homepage's Project Core section both need the same 3-card→2-card JV
-restructuring — natural next target since the facts (Sing Holdings + Sunway) are on hand.
+`pricing.html` and `faq.html` are natural next targets — both reference the fabricated land
+price ($1,178 psf ppr) and unit/tower breakdown that pricing analysis and buyer FAQs depend on.
+Check each new page's footer for its own hard-coded licence/account numbers as you go (see the
+C1555/762-333-930-4 finding above).
