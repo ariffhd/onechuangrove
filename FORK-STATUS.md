@@ -133,6 +133,19 @@ pending so nobody mistakes a partial pass for a finished, publish-ready site.
   UTF-8 decode, and JSON-LD parse). Content changes follow the exact same patterns already
   visually confirmed on 8 other pages, but a visual check is still worth doing when convenient.
 
+**gallery.html — full rewrite (same pattern as floor-plan.html, at full-page scale)**
+- The entire page presented 23 of Thomson Reserve's real artist's impressions (facade, Grand
+  Arrival, function rooms, pools, gyms, kids' zones — Grand Clubhouse, Cedar Room, Golf
+  Simulator, etc.) as One Chuan Grove's own official gallery, with a fabricated release date
+  (27 Aug 2026). Removed the featured hero image, category nav, all 5 photo-grid sections, and
+  the dead JS that populated them (photo array + lightbox) — replaced with an honest "gallery
+  coming soon" placeholder explaining what was removed and why. Removed the JSON-LD
+  `ImageGallery` node (23 `ImageObject` entries). og:image/twitter:image swapped to the shared
+  generic placeholder image, consistent with other pages.
+- **Not visually verified this pass either** — same browser-tool hiccup as floor-plan.html (file
+  confirmed structurally valid via `file`/UTF-8/JSON checks); content follows patterns already
+  visually confirmed elsewhere.
+
 ## ⚠️ NOT done — needs manual content work, not find-replace
 
 1. **Same "$810M en bloc" / "1,268 units / 6 towers" narrative still appears in OTHER sections of
@@ -149,14 +162,14 @@ pending so nobody mistakes a partial pass for a finished, publish-ready site.
    `thomson-reserve-vs-jadescape.html`) are Thomson Reserve's topical-map cluster articles — real
    facts about a different location, each with their own JSON-LD still untouched. Per Section 5,
    Chuan Grove needs its own fresh topical map. Left in place, unlinked from anywhere new.
-4. **17 other HTML pages** (`gallery.html`, `stamp-duty.html`, `payment-scheme.html`,
+4. **16 other HTML pages** (`stamp-duty.html`, `payment-scheme.html`,
    `housing-loan-information.html`, `latest-updates.html`, `review.html`, `disclaimer.html`,
    `privacy-policy.html`, `sitemap.html`, etc.) — only `index.html`, `developer.html`,
    `pricing.html`, `faq.html`, `showflat.html`, `contact.html`, `location-map.html`,
-   `site-plan.html` and `floor-plan.html` have been touched so far. Each has its own body copy,
-   sticky top bar (still says "D20"/old preview date on every untouched page), footer, and
-   JSON-LD still carrying Thomson Reserve facts — and each should be checked for its own
-   hard-coded licence/account numbers, its own Web3Forms access_key if it has a lead-capture
+   `site-plan.html`, `floor-plan.html` and `gallery.html` have been touched so far. Each has its
+   own body copy, sticky top bar (still says "D20"/old preview date on every untouched page),
+   footer, and JSON-LD still carrying Thomson Reserve facts — and each should be checked for its
+   own hard-coded licence/account numbers, its own Web3Forms access_key if it has a lead-capture
    form, any embedded Google Maps iframe (see the wrong-pin finding above), and any real
    confirmed-looking data (floor plan sizes, photos) inherited from Thomson's actual releases.
 5. **YouTube channel link** in the footer (`youtube.com/@thomson-reserve`) — still points to
@@ -167,7 +180,6 @@ pending so nobody mistakes a partial pass for a finished, publish-ready site.
 
 ## Suggested next step
 
-`gallery.html` is a natural next target — it almost certainly presents Thomson's real photos as
-One Chuan Grove's official gallery (same pattern as the floor-plan cards and the video embed
-already fixed), and is linked from the Artist's Impression section on the still-untouched parts
-of index.html.
+`review.html` is a natural next target — it's linked from the homepage and likely repeats the
+en bloc/$810M narrative and 3-developer consortium claims already fixed on index.html's
+Background Story and Project Core sections, plus its own footer landmines.
