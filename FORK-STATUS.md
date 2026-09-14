@@ -97,6 +97,26 @@ pending so nobody mistakes a partial pass for a finished, publish-ready site.
   titled as approximate. **Any other page with an embedded map should be checked for the same
   wrong-pin-right-label issue.**
 
+**location-map.html — full rewrite**
+- Same wrong-pin Google Maps embed found here too (identical URL to contact.html's) — fixed
+  identically. Replaced fabricated "3 MRT lines / TEL x CRL interchange 2030" claims with the
+  single confirmed fact (Lorong Chuan MRT, Circle Line, ~10 min walk); removed a fabricated
+  travel-time table (Orchard/CBD/Changi minute figures) in favour of a "pending research" note.
+  Schools table: replaced Ai Tong 1km/SAP claims with the reported-nearby school list, no
+  unverified distance/priority claims. Nature & Lifestyle section (MacRitchie, Windsor Nature
+  Park, Thomson Nature Park, Thomson Plaza, Upper Thomson Road) — entirely wrong-location,
+  replaced with an honest placeholder; removed the link to macritchie-reservoir-condo.html.
+
+**site-plan.html — full rewrite**
+- Replaced fabricated "developer-confirmed" masterplan claims (6 towers, 80 facilities, 2
+  entry/exits, 540,000 sqft, plot ratio 2.8, named clubs, colour palettes, PES buffer, carpark
+  count) with the real sourced facts (326,640 sqft combined GLS site, licence C1558, reported
+  five blocks up to 27 storeys — flagged as reported not confirmed) and honest "not yet
+  announced" cards for everything unconfirmed. Removed the Stack Analysis section's Upper
+  Thomson nature-reserve-view narrative and wrong-district comps (Jadescape, Sky Habitat),
+  replaced with a "pending official site plan" placeholder. Flagged the masterplan image as an
+  inherited placeholder rather than presenting it as a real render.
+
 ## ⚠️ NOT done — needs manual content work, not find-replace
 
 1. **Same "$810M en bloc" / "1,268 units / 6 towers" narrative still appears in OTHER sections of
@@ -113,15 +133,16 @@ pending so nobody mistakes a partial pass for a finished, publish-ready site.
    `thomson-reserve-vs-jadescape.html`) are Thomson Reserve's topical-map cluster articles — real
    facts about a different location, each with their own JSON-LD still untouched. Per Section 5,
    Chuan Grove needs its own fresh topical map. Left in place, unlinked from anywhere new.
-4. **20 other HTML pages** (`floor-plan.html`, `site-plan.html`, `gallery.html`,
-   `location-map.html`, `stamp-duty.html`, `payment-scheme.html`, `housing-loan-information.html`,
-   `latest-updates.html`, `review.html`, `disclaimer.html`, `privacy-policy.html`, `sitemap.html`,
-   etc.) — only `index.html`, `developer.html`, `pricing.html`, `faq.html`, `showflat.html` and
-   `contact.html` have been touched so far. Each has its own body copy, sticky top bar (still
-   says "D20"/old preview date on every untouched page), footer, and JSON-LD still carrying
-   Thomson Reserve facts — and each should be checked for its own hard-coded licence/account
-   numbers, its own Web3Forms access_key if it has a lead-capture form, and any embedded Google
-   Maps iframe (see the wrong-pin finding above), not assumed identical to the pages already fixed.
+4. **18 other HTML pages** (`floor-plan.html`, `gallery.html`, `stamp-duty.html`,
+   `payment-scheme.html`, `housing-loan-information.html`, `latest-updates.html`, `review.html`,
+   `disclaimer.html`, `privacy-policy.html`, `sitemap.html`, etc.) — only `index.html`,
+   `developer.html`, `pricing.html`, `faq.html`, `showflat.html`, `contact.html`,
+   `location-map.html` and `site-plan.html` have been touched so far. Each has its own body
+   copy, sticky top bar (still says "D20"/old preview date on every untouched page), footer, and
+   JSON-LD still carrying Thomson Reserve facts — and each should be checked for its own
+   hard-coded licence/account numbers, its own Web3Forms access_key if it has a lead-capture
+   form, and any embedded Google Maps iframe (see the wrong-pin finding above), not assumed
+   identical to the pages already fixed.
 5. **YouTube channel link** in the footer (`youtube.com/@thomson-reserve`) — still points to
    Thomson Reserve's real channel; needs a real Chuan Grove channel or removal.
 6. Everything still marked `TBC`: TOP/launch date, GBP Place ID, social handles, NAP phone
@@ -130,6 +151,6 @@ pending so nobody mistakes a partial pass for a finished, publish-ready site.
 
 ## Suggested next step
 
-`location-map.html` and `site-plan.html` are natural next targets — `location-map.html` likely
-has its own embedded map (check for the same wrong-pin issue found in contact.html) and probably
-the most Thomson-specific location narrative left (MRT lines, schools, nature reserve claims).
+`floor-plan.html` is a natural next target — it's linked heavily from other already-fixed pages
+(pricing, showflat, site-plan all point to it) and likely has the same real-confirmed-floor-plan-
+sizes issue already found and removed from pricing.html and showflat.html's unit dropdown.
