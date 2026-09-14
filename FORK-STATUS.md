@@ -57,6 +57,29 @@ pending so nobody mistakes a partial pass for a finished, publish-ready site.
   other untouched page should be individually checked for its own hard-coded licence/account
   numbers, not assumed safe just because the brand-name pass touched it.**
 
+**pricing.html — full rewrite**
+- Recomputed indicative launch PSF floor (\$2,230–\$2,390) from Chuan Grove's real land cost
+  run through the same generic RCR cost/margin methodology the page already used
+- Removed the "vs Jadescape & AMO Residence" comparison table/info-cards (wrong district — D20,
+  not D19) and the "Estimated Pricing by Unit Type" table (used another real project's actual
+  confirmed floor-plan sizes) — both replaced with honest "pending/not released" placeholders,
+  keeping the section slots per the checklist's own instruction
+
+**faq.html — full rewrite (23 Q&As + duplicate JSON-LD FAQPage)**
+- All visible Q&As and their JSON-LD duplicates rewritten with real facts; removed unverified
+  claims (Ai Tong 1km zone, wrong MRT line/CRL interchange, fabricated 2032 TOP)
+- Renamed "Comparisons with Other D20 Launches" category → "Government Land Sales Background"
+  with real GLS tender facts, since Jadescape/AMO Residence (D20) don't apply to a D19 GLS site
+
+**🔴 Security finding — real third-party API key was live in 6 files**
+- `index.html`, `faq.html`, `review.html`, `showflat.html`, and both `thomson-reserve-vs-*.html`
+  pages had Thomson Reserve's actual working Web3Forms `access_key` hard-coded into their lead
+  capture forms. Any registration submitted on this site would have delivered the buyer's name/
+  phone/email to Thomson Reserve's Web3Forms account, not ours. Replaced in all 6 files with
+  `TBC-REPLACE-WITH-YOUR-OWN-WEB3FORMS-ACCESS-KEY`. **A real Web3Forms account + key must be
+  created for One Chuan Grove before any registration form goes live** — this was not caught by
+  the original Section 1 pass since it's a credential, not brand text.
+
 ## ⚠️ NOT done — needs manual content work, not find-replace
 
 1. **Same "$810M en bloc" / "1,268 units / 6 towers" narrative still appears in OTHER sections of
@@ -73,14 +96,14 @@ pending so nobody mistakes a partial pass for a finished, publish-ready site.
    `thomson-reserve-vs-jadescape.html`) are Thomson Reserve's topical-map cluster articles — real
    facts about a different location, each with their own JSON-LD still untouched. Per Section 5,
    Chuan Grove needs its own fresh topical map. Left in place, unlinked from anywhere new.
-4. **24 other HTML pages** (`pricing.html`, `floor-plan.html`, `faq.html`, `contact.html`,
-   `showflat.html`, `site-plan.html`, `gallery.html`, `location-map.html`, `stamp-duty.html`,
-   `payment-scheme.html`, `housing-loan-information.html`, `latest-updates.html`, `review.html`,
-   `disclaimer.html`, `privacy-policy.html`, `sitemap.html`, etc.) — only `index.html` and
-   `developer.html` have been touched so far. Each has its own body copy, sticky top bar (still
-   says "D20"/old preview date on every untouched page), footer, and JSON-LD still carrying
-   Thomson Reserve facts — and each should be checked for its own hard-coded licence/account
-   numbers per the finding above, not assumed identical to the other pages.
+4. **22 other HTML pages** (`floor-plan.html`, `contact.html`, `site-plan.html`, `gallery.html`,
+   `location-map.html`, `stamp-duty.html`, `payment-scheme.html`, `housing-loan-information.html`,
+   `latest-updates.html`, `review.html`, `showflat.html`, `disclaimer.html`, `privacy-policy.html`,
+   `sitemap.html`, etc.) — only `index.html`, `developer.html`, `pricing.html` and `faq.html` have
+   been touched so far. Each has its own body copy, sticky top bar (still says "D20"/old preview
+   date on every untouched page), footer, and JSON-LD still carrying Thomson Reserve facts — and
+   each should be checked for its own hard-coded licence/account numbers **and its own Web3Forms
+   access_key if it has a lead-capture form**, not assumed identical to the pages already fixed.
 5. **YouTube channel link** in the footer (`youtube.com/@thomson-reserve`) — still points to
    Thomson Reserve's real channel; needs a real Chuan Grove channel or removal.
 6. Everything still marked `TBC`: TOP/launch date, GBP Place ID, social handles, NAP phone
@@ -89,7 +112,7 @@ pending so nobody mistakes a partial pass for a finished, publish-ready site.
 
 ## Suggested next step
 
-`pricing.html` and `faq.html` are natural next targets — both reference the fabricated land
-price ($1,178 psf ppr) and unit/tower breakdown that pricing analysis and buyer FAQs depend on.
-Check each new page's footer for its own hard-coded licence/account numbers as you go (see the
+`showflat.html` and `contact.html` are natural next targets — both have lead-capture forms
+(check for their own Web3Forms access_key) and are high-visibility conversion pages. Check each
+new page's footer for its own hard-coded licence/account numbers as you go (see the
 C1555/762-333-930-4 finding above).
