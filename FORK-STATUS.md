@@ -117,6 +117,22 @@ pending so nobody mistakes a partial pass for a finished, publish-ready site.
   replaced with a "pending official site plan" placeholder. Flagged the masterplan image as an
   inherited placeholder rather than presenting it as a real render.
 
+**floor-plan.html — full rewrite (biggest confirmed-vs-fake gap found yet)**
+- This page presented four of Thomson Reserve's real, officially-released show unit floor plans
+  (Type BPS1/CP1/DP1(L)/E1(L) — exact sizes, appliance brands, marble finishes, a downloadable
+  PDF) as if they were One Chuan Grove's own confirmed floor plans. Chuan Grove's floor plans
+  have not been released. Removed all 4 detailed floor plan cards, the PDF download link, and
+  the "4 Show Unit Floor Plans Released" badge; removed the matching JSON-LD `ImageObject`/
+  `DigitalDocument` nodes; removed the "Full Unit Mix" table's fabricated confirmed-sizes/prices
+  (same fix already applied to pricing.html); kept the generic buyer-education info-cards but
+  stripped Thomson-specific claims (UOL layout quality, nature-reserve views). og:image/
+  twitter:image also pointed to one of the same real Thomson floor plan photos — swapped to the
+  generic placeholder image used elsewhere.
+- **Not visually verified this pass** — the browser tool hit a persistent "file may be missing
+  or unreadable" error specific to this file (the file itself is valid, confirmed via `file`,
+  UTF-8 decode, and JSON-LD parse). Content changes follow the exact same patterns already
+  visually confirmed on 8 other pages, but a visual check is still worth doing when convenient.
+
 ## ⚠️ NOT done — needs manual content work, not find-replace
 
 1. **Same "$810M en bloc" / "1,268 units / 6 towers" narrative still appears in OTHER sections of
@@ -133,16 +149,16 @@ pending so nobody mistakes a partial pass for a finished, publish-ready site.
    `thomson-reserve-vs-jadescape.html`) are Thomson Reserve's topical-map cluster articles — real
    facts about a different location, each with their own JSON-LD still untouched. Per Section 5,
    Chuan Grove needs its own fresh topical map. Left in place, unlinked from anywhere new.
-4. **18 other HTML pages** (`floor-plan.html`, `gallery.html`, `stamp-duty.html`,
-   `payment-scheme.html`, `housing-loan-information.html`, `latest-updates.html`, `review.html`,
-   `disclaimer.html`, `privacy-policy.html`, `sitemap.html`, etc.) — only `index.html`,
-   `developer.html`, `pricing.html`, `faq.html`, `showflat.html`, `contact.html`,
-   `location-map.html` and `site-plan.html` have been touched so far. Each has its own body
-   copy, sticky top bar (still says "D20"/old preview date on every untouched page), footer, and
+4. **17 other HTML pages** (`gallery.html`, `stamp-duty.html`, `payment-scheme.html`,
+   `housing-loan-information.html`, `latest-updates.html`, `review.html`, `disclaimer.html`,
+   `privacy-policy.html`, `sitemap.html`, etc.) — only `index.html`, `developer.html`,
+   `pricing.html`, `faq.html`, `showflat.html`, `contact.html`, `location-map.html`,
+   `site-plan.html` and `floor-plan.html` have been touched so far. Each has its own body copy,
+   sticky top bar (still says "D20"/old preview date on every untouched page), footer, and
    JSON-LD still carrying Thomson Reserve facts — and each should be checked for its own
    hard-coded licence/account numbers, its own Web3Forms access_key if it has a lead-capture
-   form, and any embedded Google Maps iframe (see the wrong-pin finding above), not assumed
-   identical to the pages already fixed.
+   form, any embedded Google Maps iframe (see the wrong-pin finding above), and any real
+   confirmed-looking data (floor plan sizes, photos) inherited from Thomson's actual releases.
 5. **YouTube channel link** in the footer (`youtube.com/@thomson-reserve`) — still points to
    Thomson Reserve's real channel; needs a real Chuan Grove channel or removal.
 6. Everything still marked `TBC`: TOP/launch date, GBP Place ID, social handles, NAP phone
@@ -151,6 +167,7 @@ pending so nobody mistakes a partial pass for a finished, publish-ready site.
 
 ## Suggested next step
 
-`floor-plan.html` is a natural next target — it's linked heavily from other already-fixed pages
-(pricing, showflat, site-plan all point to it) and likely has the same real-confirmed-floor-plan-
-sizes issue already found and removed from pricing.html and showflat.html's unit dropdown.
+`gallery.html` is a natural next target — it almost certainly presents Thomson's real photos as
+One Chuan Grove's official gallery (same pattern as the floor-plan cards and the video embed
+already fixed), and is linked from the Artist's Impression section on the still-untouched parts
+of index.html.
