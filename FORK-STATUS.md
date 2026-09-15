@@ -170,6 +170,19 @@ pending so nobody mistakes a partial pass for a finished, publish-ready site.
   as "The Chuan Grove GLS Story" with 3 real dated cards.
 - Visually verified — stats grid and milestone tracker render correctly.
 
+**stamp-duty.html — full rewrite (light pass, mostly generic content)**
+- Standard head/sticky-bar/footer fixes. Softened an SSD section claim that asserted "TOP of
+  2032" as fact. BSD/ABSD/SSD rate tables and the stamp duty calculator are generic Singapore
+  tax law, unrelated to any project — left as-is, verified accurate. Visually confirmed.
+
+**payment-scheme.html — full rewrite (light pass, mostly generic content)**
+- Standard head/sticky-bar/footer fixes. The NPS milestone table had a fully fabricated
+  year-by-year construction schedule (Launch Day 2026 → CSC 2033, tied to the fake 2032 TOP) —
+  replaced every post-booking milestone's estimated year with "TBC" rather than invent a
+  schedule Chuan Grove hasn't announced. Softened a "6-7 years to completion" claim derived from
+  the same fake schedule. NPS stage percentages, CPF rules, and the calculator are generic
+  Singapore regulatory content — left as-is. Visually confirmed the table renders correctly.
+
 ## ⚠️ NOT done — needs manual content work, not find-replace
 
 1. **Same "$810M en bloc" / "1,268 units / 6 towers" narrative still appears in OTHER sections of
@@ -186,12 +199,12 @@ pending so nobody mistakes a partial pass for a finished, publish-ready site.
    `thomson-reserve-vs-jadescape.html`) are Thomson Reserve's topical-map cluster articles — real
    facts about a different location, each with their own JSON-LD still untouched. Per Section 5,
    Chuan Grove needs its own fresh topical map. Left in place, unlinked from anywhere new.
-4. **14 other HTML pages** (`stamp-duty.html`, `payment-scheme.html`,
-   `housing-loan-information.html`, `disclaimer.html`, `privacy-policy.html`, `sitemap.html`,
-   etc.) — only `index.html`, `developer.html`, `pricing.html`, `faq.html`, `showflat.html`,
-   `contact.html`, `location-map.html`, `site-plan.html`, `floor-plan.html`, `gallery.html`,
-   `review.html` and `latest-updates.html` have been touched so far. Each has its own body copy,
-   sticky top bar (still says "D20"/old preview date on every untouched page), footer, and
+4. **12 other HTML pages** (`housing-loan-information.html`, `disclaimer.html`,
+   `privacy-policy.html`, `sitemap.html`, etc.) — only `index.html`, `developer.html`,
+   `pricing.html`, `faq.html`, `showflat.html`, `contact.html`, `location-map.html`,
+   `site-plan.html`, `floor-plan.html`, `gallery.html`, `review.html`, `latest-updates.html`,
+   `stamp-duty.html` and `payment-scheme.html` have been touched so far. Each has its own body
+   copy, sticky top bar (still says "D20"/old preview date on every untouched page), footer, and
    JSON-LD still carrying Thomson Reserve facts — and each should be checked for its own
    hard-coded licence/account numbers, its own Web3Forms access_key if it has a lead-capture
    form, any embedded Google Maps iframe (see the wrong-pin finding above), and any real
@@ -205,6 +218,6 @@ pending so nobody mistakes a partial pass for a finished, publish-ready site.
 
 ## Suggested next step
 
-`stamp-duty.html`, `payment-scheme.html` and `housing-loan-information.html` (the Financing
-dropdown pages) are natural next targets — likely mostly generic Singapore tax/loan content with
-the same recurring footer/sticky-bar landmines, so probably faster passes than recent pages.
+`housing-loan-information.html` is a natural next target — the last of the three Financing
+dropdown pages, likely the same light pass as stamp-duty.html and payment-scheme.html (mostly
+generic Singapore loan/TDSR content plus the recurring footer/sticky-bar landmines).
