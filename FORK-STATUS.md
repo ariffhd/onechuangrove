@@ -301,34 +301,98 @@ completes the "18 non-inherited pages" scope (now 19, counting index.html's full
 - **All 18 "regular" site pages are now fully rewritten** (everything except the 8 inherited
   content pages, which need a genuine new topical map, not a find-replace pass).
 
+**New topical map — all 8 inherited content pages replaced (Section 5 of the checklist)**
+
+Researched real, sourced facts (LTA station data, MOE/school addresses, GLS tender records, and
+public property-portal listings for genuine nearby projects) via web search, then built a fresh
+8-page topical map for Lorong Chuan / District 19 — not a find-replace pass, genuine new content
+per the checklist's Section 5 instruction. All 8 old files removed (`git rm`) and replaced:
+
+- **`upper-thomson-mrt.html` → `lorong-chuan-mrt.html`** — Lorong Chuan MRT (CC14) Circle Line
+  guide. Corrected a real error introduced earlier in this project: I had written the station code
+  as **CC15 across index.html** (that's actually Bishan's code) — fixed there too as part of this
+  pass. Real facts used: opened 28 May 2009 (CCL Stage 3), one stop to Serangoon (CC13/NEL) and
+  Bishan (CC15/NSL), and the Circle Line's Stage 6 completion (12 Jul 2026) closing the loop to
+  Marina Bay (CC33) and HarbourFront (CC29) — verified via LTA's published station sequence, not
+  estimated. Replaced invented minute-by-minute travel times with verified stop counts instead.
+- **`bright-hill-drive.html` → `lorong-chuan-gls-site.html`** — the real GLS site-history story:
+  two adjoining parcels (170,409 + 156,231 = ~326,640 sq ft, already sourced in site-plan.html),
+  won by the same JV in 2025, explicitly framed as "why this isn't an en bloc story."
+- **`ai-tong-school-1km-condo.html` → `schools-near-lorong-chuan.html`** — led with the one
+  precisely verifiable fact (St. Gabriel's Primary School, 220 Lorong Chuan, ~5 min walk from the
+  MRT), explicitly declined to claim a 1km/2km priority-registration zone for One Chuan Grove since
+  the site has no confirmed civic address yet, and listed other reported-nearby schools (Zhonghua
+  Primary, Kuo Chuan Presbyterian, CHIJ Our Lady of Good Counsel, Nanyang JC, Australian
+  International School, Stamford American International School) as "reported, distance TBC" rather
+  than inventing distances.
+- **`macritchie-reservoir-condo.html` → `nex-serangoon-lifestyle.html`** — real, sourced amenities
+  actually near Lorong Chuan: NEX mall + Serangoon Public Library + Serangoon Bus Interchange (one
+  MRT stop away), two small real neighbourhood parks (Chiltern Drive Interim Park, Kampong Park @
+  Serangoon), and Serangoon Garden's hawker scene — replacing the entirely wrong-location MacRitchie
+  Reservoir/Windsor Nature Park content.
+- **`new-launch-vs-resale-district-20.html` → `new-launch-vs-resale-district-19.html`** — found a
+  genuine resale comparable directly in the area: **The Scala @ Lorong Chuan** (120 Serangoon
+  Avenue 3, 99-yr leasehold, TOP 2013, 468 units, developer Circle Line Pte. Ltd./Hong Leong/Hong
+  Realty/TID, current resale PSF ~$1,858–$2,544) — a real, sourced comparison instead of Thomson's
+  fabricated Jadescape/AMO Residence framing.
+- **`thomson-reserve-vs-amo-residence.html` → `one-chuan-grove-vs-chuan-park.html`** — found a
+  genuine, directly relevant comparable: **Chuan Park**, a real, unrelated new launch also at
+  Lorong Chuan (opposite the MRT), by Kingsford Huray Development + MCC Land, en bloc-acquired for
+  $890M in Jul 2022, 916 units across 5 blocks. Explicitly flagged that the two projects share
+  nothing but a similar name and address — worth a dedicated FAQ answer given the real risk of
+  buyer confusion between them.
+- **`thomson-reserve-vs-jadescape.html` → `district-19-new-launch-price-guide.html`** — rather than
+  force a second weak head-to-head (the only other nearby project found, Jansen House, is a
+  21-unit/5-storey 999-year-leasehold boutique development — too different in scale/type for a
+  meaningful comparison), built a broader District 19 PSF benchmark page: the reported $2,100–
+  $2,600 psf district-wide range, One Chuan Grove's own $2,230–$2,390 estimate in context, and a
+  summary table referencing The Scala and Chuan Park with links to their dedicated pages.
+- **`balance-units-chart.html`** — kept its filename (linked from 8+ other pages as a functional
+  feature page) since its content was already mostly generic/evergreen "how balance units charts
+  work" material; targeted edits only, removing the fabricated 1,268-unit count and "Mid-October
+  2026" dates rather than a full rewrite.
+
+All 8 pages follow the established page pattern (head/JSON-LD/topbar/nav/footer identical
+structure to every other page, footer using the same developer/licence/units/TBC fixes applied
+sitewide). Every page's JSON-LD validated as parseable; HTML tag balance checked programmatically
+across the whole site (not just these 8) — all balanced. Sitewide internal-link check confirms
+every `href` to an `onechuangrove.sg/*.html` page resolves to a file that actually exists.
+
+**Also fixed while sweeping for cross-references:**
+- `index.html`'s Resource Hub cards now link to the 8 new pages with accurate taglines (previously
+  linked to the old inherited filenames with generic "content pending" placeholders).
+- `sitemap.html`'s "Neighbourhood Guides" category updated to the new filenames and real
+  descriptions.
+- `sitemap.xml` updated to the new filenames — and a **pre-existing broken link found and fixed**:
+  it referenced `thomson-reserve-review.html`, which has never existed under that name in this
+  fork (the real file is `review.html`) — a leftover from the original Section 1 mechanical pass
+  that nothing had caught until this sweep.
+
 ## ⚠️ NOT done — needs manual content work, not find-replace
 
 1. **All images/PDFs** (`thomson-reserve-*.jpg/.png`, floor plan PDF, 3 developer logos) are
    Thomson Reserve's real marketing photos and competitors' real logos, still referenced by
    filename (now confusingly under the `onechuangrove.sg` domain). **Do not deploy with these
    assets in place.** Full list: `find . -iname "thomson-reserve-*"` plus the 3 developer logo PNGs.
-2. **8 inherited content pages** (`ai-tong-school-1km-condo.html`, `bright-hill-drive.html`,
-   `macritchie-reservoir-condo.html`, `upper-thomson-mrt.html`, `balance-units-chart.html`,
-   `new-launch-vs-resale-district-20.html`, `thomson-reserve-vs-amo-residence.html`,
-   `thomson-reserve-vs-jadescape.html`) are Thomson Reserve's topical-map cluster articles — real
-   facts about a different location, each with their own JSON-LD still untouched. Per Section 5,
-   Chuan Grove needs its own fresh topical map. Left in place, unlinked from anywhere new.
-3. **Zero pages left untouched outside the inherited cluster.** All 19 non-inherited HTML files
-   (18 generic pages + index.html, now fully done) are rewritten. The only files left with
-   Thomson Reserve content are the 8 inherited content pages at item 2 above.
-4. Everything still marked `TBC`: TOP/launch date, GBP Place ID, social handles, NAP phone
+2. **Zero pages left with fabricated or inherited-wrong-location content.** All 27 HTML pages
+   (19 previously-done pages + the 8 topical-map pages, now genuinely rewritten) use real, sourced
+   or explicitly-TBC facts. Every page passes JSON-LD validation, tag-balance checks, and
+   internal-link resolution.
+3. Everything still marked `TBC`: TOP/launch date, GBP Place ID, social handles, NAP phone
    number, full NAP block (street address/postal code — the GLS site doesn't have a public civic
    address yet), brand colors/logo, YouTube handle (was previously Thomson's real channel — now
    neutralized to `#tbc-youtube-handle` across every page including index.html's footer).
 
 ## Suggested next step
 
-Every non-inherited page — all 19 of them, including index.html in full — is now rewritten with
-real, verified One Chuan Grove facts. One substantial body of work remains:
-- The 8 inherited content pages (item 2 above) need a genuine new topical map for Chuan Grove per
-  Section 5 of the checklist — this is net-new content creation (new article angles, new internal
-  linking structure), not a find-replace or fact-correction pass, and is a materially larger scope
-  than everything done so far. Worth confirming with the user before starting, since it's a
-  different kind of work than the page-by-page sweep completed to this point.
-Secondary, smaller items: real asset swap (item 1) and the remaining TBC fields (item 4) both
-depend on information only the user/developer can supply.
+Every page on the site — all 27 of them — is now rewritten with real, verified or explicitly-TBC
+One Chuan Grove facts. There is no more find-replace or fact-correction work left to do. What
+remains depends on information only the user/developer can supply:
+1. **Real marketing assets** (item 1 above) — artist's impressions, floor plans, gallery photos,
+   developer logos, and a teaser video, none of which exist yet for the real One Chuan Grove.
+2. **The TBC fields** (item 3 above) — TOP/launch date, GBP Place ID, social handles, phone number,
+   full civic address, tenure, brand colors/logo. Most of these can only be filled in once the
+   developer makes an official announcement or the site is issued a civic address.
+3. Consider a live Rich Results Test pass across all pages once deployed, and a NAP consistency
+   check against the eventual GBP listing (per checklist Sections 3 and 8) — both require a live
+   domain to run against, so not actionable in local development.
