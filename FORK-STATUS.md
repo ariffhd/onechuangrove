@@ -219,6 +219,20 @@ pending so nobody mistakes a partial pass for a finished, publish-ready site.
   page using this same footer edit sequence. Visually confirmed both badges and the DPO contact
   block render correctly.
 
+**sitemap.html — full rewrite (last of the generic pages — all 18 now done)**
+- Standard head/sticky-bar/footer fixes. Not purely a link list as guessed — the "Main Pages"/
+  "Project Information" taglines had fixable developer-name/district/fabricated-masterplan-size
+  claims. The bigger find: the "Neighbourhood Guides" category links to all 8 inherited content
+  pages under taglines making specific false claims (CRL 2030 interchange, District 20, P1
+  registration zone, MacRitchie premium, "vs Jadescape/AMO Residence" comparisons). Replaced each
+  with an honest "Neighbourhood guide — content pending update for One Chuan Grove" rather than
+  either leave the false claims or invent new ones for content that doesn't exist yet — link
+  labels/hrefs left unchanged since renaming them is tied to the eventual topical-map rewrite
+  (item 3 below), not today's scope. Got the dev-badge color-style right on the first attempt
+  this time. Visually confirmed.
+- **All 18 "regular" site pages are now fully rewritten** (everything except the 8 inherited
+  content pages, which need a genuine new topical map, not a find-replace pass).
+
 ## ⚠️ NOT done — needs manual content work, not find-replace
 
 1. **Same "$810M en bloc" / "1,268 units / 6 towers" narrative still appears in OTHER sections of
@@ -235,11 +249,8 @@ pending so nobody mistakes a partial pass for a finished, publish-ready site.
    `thomson-reserve-vs-jadescape.html`) are Thomson Reserve's topical-map cluster articles — real
    facts about a different location, each with their own JSON-LD still untouched. Per Section 5,
    Chuan Grove needs its own fresh topical map. Left in place, unlinked from anywhere new.
-4. **Only 1 generic page left untouched**: `sitemap.html`. (The site has 26 HTML files total: 17
-   now fully rewritten, 8 are the "inherited content pages" tracked separately at item 3 above,
-   leaving this 1.) A sitemap page is more likely to be purely a list of links than to carry
-   entity-specific prose, but check its footer/JSON-LD/sticky-bar for the same recurring
-   landmines regardless.
+4. **Zero generic pages left untouched.** All 18 non-inherited HTML files are done. The only
+   files left with Thomson Reserve content are the 8 inherited content pages at item 3 above.
 5. **YouTube channel link** in the footer (`youtube.com/@thomson-reserve`) — still points to
    Thomson Reserve's real channel; needs a real Chuan Grove channel or removal.
 6. Everything still marked `TBC`: TOP/launch date, GBP Place ID, social handles, NAP phone
@@ -248,10 +259,12 @@ pending so nobody mistakes a partial pass for a finished, publish-ready site.
 
 ## Suggested next step
 
-`sitemap.html` is the last generic page — a quick pass should close it out. After that, the only
-remaining major body of work is the 8 inherited content pages (item 3 above), which need a
-genuine new topical map for Chuan Grove per Section 5 of the checklist, not a find-replace pass —
-and the still-untouched sections of index.html itself (item 1 above: Latest Updates feed,
-Timeline to Launch, Project Details table, Connectivity, Investment Thesis, Family & Lifestyle,
-Live Inventory Monitor, Resource Hub). Worth discussing with the user which to prioritize next,
-since both are substantial content-writing efforts rather than quick landmine sweeps.
+All quick landmine-sweep passes are done — every non-inherited page is rewritten. Two substantial
+bodies of work remain, both content-writing efforts rather than sweeps:
+1. The still-untouched sections of index.html itself (item 1 above: Latest Updates feed, Timeline
+   to Launch, Project Details table, Connectivity, Investment Thesis, Family & Lifestyle, Live
+   Inventory Monitor, Resource Hub) — same "$810M en bloc / 1,268 units" narrative as everywhere
+   else, on the homepage.
+2. The 8 inherited content pages (item 3 above) — need a genuine new topical map for Chuan Grove
+   per Section 5 of the checklist, not a find-replace pass.
+Worth discussing with the user which to prioritize next.
