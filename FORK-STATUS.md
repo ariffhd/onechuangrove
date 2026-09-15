@@ -156,6 +156,20 @@ pending so nobody mistakes a partial pass for a finished, publish-ready site.
   the one found in faq.html: tagged with the pre-rename filename).
 - Visually verified — renders correctly, two-column Strengths/Risks and Buy/Don't-Buy grids intact.
 
+**latest-updates.html — full rewrite (entire fabricated en bloc timeline replaced)**
+- The whole page was built around a fictional dated sequence: 2007/2018 en bloc attempts, Oct
+  2024 \$810M deal, 1 Jul 2025 High Court order, 2 Oct 2025 acquisition, 26 Mar 2026 naming, Apr
+  2026 VVIP registration, a 14 Aug 2026 "firm project update" with fabricated masterplan/
+  facility/consultant-team details, and a 14 Sep 2026 floor plan release — none of it happened
+  to Chuan Grove, a GLS site with a real, different history.
+- Replaced the 10-item updates feed with the 3 real dated events (8 Jul 2025 and 4 Sep 2025 GLS
+  tender wins, 31 Jul 2026 Developer's Licence C1558) plus one honest "VVIP preview — TBC" entry
+  — no invented milestones for the gap between licence issuance and today.
+- Sidebar stats and milestone tracker: same real-facts-only treatment, remaining stages marked
+  TBC instead of estimated dates. "The Thomson View En Bloc Story" section renamed and rewritten
+  as "The Chuan Grove GLS Story" with 3 real dated cards.
+- Visually verified — stats grid and milestone tracker render correctly.
+
 ## ⚠️ NOT done — needs manual content work, not find-replace
 
 1. **Same "$810M en bloc" / "1,268 units / 6 towers" narrative still appears in OTHER sections of
@@ -172,17 +186,17 @@ pending so nobody mistakes a partial pass for a finished, publish-ready site.
    `thomson-reserve-vs-jadescape.html`) are Thomson Reserve's topical-map cluster articles — real
    facts about a different location, each with their own JSON-LD still untouched. Per Section 5,
    Chuan Grove needs its own fresh topical map. Left in place, unlinked from anywhere new.
-4. **15 other HTML pages** (`stamp-duty.html`, `payment-scheme.html`,
-   `housing-loan-information.html`, `latest-updates.html`, `disclaimer.html`,
-   `privacy-policy.html`, `sitemap.html`, etc.) — only `index.html`, `developer.html`,
-   `pricing.html`, `faq.html`, `showflat.html`, `contact.html`, `location-map.html`,
-   `site-plan.html`, `floor-plan.html`, `gallery.html` and `review.html` have been touched so
-   far. Each has its own body copy, sticky top bar (still says "D20"/old preview date on every
-   untouched page), footer, and JSON-LD still carrying Thomson Reserve facts — and each should
-   be checked for its own hard-coded licence/account numbers, its own Web3Forms access_key if it
-   has a lead-capture form, any embedded Google Maps iframe (see the wrong-pin finding above),
-   and any real confirmed-looking data (floor plan sizes, photos) inherited from Thomson's
-   actual releases.
+4. **14 other HTML pages** (`stamp-duty.html`, `payment-scheme.html`,
+   `housing-loan-information.html`, `disclaimer.html`, `privacy-policy.html`, `sitemap.html`,
+   etc.) — only `index.html`, `developer.html`, `pricing.html`, `faq.html`, `showflat.html`,
+   `contact.html`, `location-map.html`, `site-plan.html`, `floor-plan.html`, `gallery.html`,
+   `review.html` and `latest-updates.html` have been touched so far. Each has its own body copy,
+   sticky top bar (still says "D20"/old preview date on every untouched page), footer, and
+   JSON-LD still carrying Thomson Reserve facts — and each should be checked for its own
+   hard-coded licence/account numbers, its own Web3Forms access_key if it has a lead-capture
+   form, any embedded Google Maps iframe (see the wrong-pin finding above), and any real
+   confirmed-looking data (floor plan sizes, photos, dated milestones) inherited from Thomson's
+   actual history.
 5. **YouTube channel link** in the footer (`youtube.com/@thomson-reserve`) — still points to
    Thomson Reserve's real channel; needs a real Chuan Grove channel or removal.
 6. Everything still marked `TBC`: TOP/launch date, GBP Place ID, social handles, NAP phone
@@ -191,6 +205,6 @@ pending so nobody mistakes a partial pass for a finished, publish-ready site.
 
 ## Suggested next step
 
-`latest-updates.html` is a natural next target — it's linked from the homepage's Latest Updates
-feed and almost certainly repeats the en bloc timeline/milestone narrative already replaced in
-index.html's own Latest Updates section (still on the "not done" list at item 1 above).
+`stamp-duty.html`, `payment-scheme.html` and `housing-loan-information.html` (the Financing
+dropdown pages) are natural next targets — likely mostly generic Singapore tax/loan content with
+the same recurring footer/sticky-bar landmines, so probably faster passes than recent pages.
