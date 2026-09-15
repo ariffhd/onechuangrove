@@ -278,10 +278,11 @@ pending so nobody mistakes a partial pass for a finished, publish-ready site.
   double-checked on any page where it wasn't the very first thing verified.**
 - JSON-LD (single `@graph` block, unchanged by this pass) re-validated as parseable JSON; HTML tag
   balance (div/section/table/tr/td/ul/li/figure/a) checked programmatically — all balanced.
-- **Not visually verified this pass** — the browser tool hit the same transient "file may be
-  missing or unreadable" error seen previously on floor-plan.html/gallery.html, this time for
-  index.html itself. Content follows patterns already visually confirmed on every other page;
-  worth a visual check when the browser tool cooperates.
+- **Visually verified** — worked around the browser tool's transient file:// access error (same
+  one seen on floor-plan.html/gallery.html) by serving the directory over a temporary local HTTP
+  server instead. Confirmed the Latest Updates card, Timeline/Project Details table, Gallery
+  placeholder blocks, and footer (including both dev-badge labels rendering with correct color
+  styling this time) all render correctly.
 
 **index.html is now fully rewritten — this closes out item 1 from the NOT-done list below and
 completes the "18 non-inherited pages" scope (now 19, counting index.html's full completion).**
