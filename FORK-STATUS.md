@@ -191,6 +191,19 @@ pending so nobody mistakes a partial pass for a finished, publish-ready site.
   content — left as-is. Visually confirmed. **All 3 Financing pages (stamp-duty, payment-scheme,
   housing-loan-information) now done.**
 
+**disclaimer.html — full rewrite (confirmed worth checking closely, not pure boilerplate)**
+- Standard head/sticky-bar/footer fixes. Found real entity-specific content that would have been
+  missed by a purely mechanical pass: the Intellectual Property clause named "UOL Group Limited,
+  Singapore Land Group and CapitaLand Development" as trademark holders (corrected to Sing
+  Holdings Residential + Sunway Developments), and the Governing Law section's Enquiries contact
+  named "Tamarind Development Pte. Ltd." as the entity to contact (corrected to the real licensed
+  entity, Chuan Grove Pte. Ltd.). The general legal boilerplate (pricing/renderings/timeline/
+  financial/no-contract/third-party/IP/governing-law clauses) is generic and left as-is.
+- **Found and fixed a bug from the previous two pages**: the "Sing Holdings [logo pending]"
+  footer badge was missing its color style on this page, rendering as invisible dark-on-dark
+  text — checked payment-scheme.html and housing-loan-information.html for the same issue (both
+  were already correct) and fixed it here. Visually confirmed both badges now render correctly.
+
 ## ⚠️ NOT done — needs manual content work, not find-replace
 
 1. **Same "$810M en bloc" / "1,268 units / 6 towers" narrative still appears in OTHER sections of
@@ -207,14 +220,12 @@ pending so nobody mistakes a partial pass for a finished, publish-ready site.
    `thomson-reserve-vs-jadescape.html`) are Thomson Reserve's topical-map cluster articles — real
    facts about a different location, each with their own JSON-LD still untouched. Per Section 5,
    Chuan Grove needs its own fresh topical map. Left in place, unlinked from anywhere new.
-4. **Only 3 generic pages left untouched**: `disclaimer.html`, `privacy-policy.html`,
-   `sitemap.html`. (The site has 26 HTML files total: 15 now fully rewritten, 8 are the
-   "inherited content pages" tracked separately at item 3 above, leaving these 3.) Each should
-   get the same sticky-bar/footer/JSON-LD/logo-text-sub fixes as every other page, checked for
-   its own hard-coded licence/account numbers, Web3Forms access_key, embedded Google Maps
-   iframe, and any real confirmed-looking data inherited from Thomson's actual history —
-   `disclaimer.html` and `privacy-policy.html` in particular may have Thomson-specific legal/
-   entity references worth checking closely (developer name, NAP block, registered address).
+4. **Only 2 generic pages left untouched**: `privacy-policy.html`, `sitemap.html`. (The site has
+   26 HTML files total: 16 now fully rewritten, 8 are the "inherited content pages" tracked
+   separately at item 3 above, leaving these 2.) `privacy-policy.html` in particular may have
+   Thomson-specific legal/entity references worth checking closely, per the pattern found in
+   disclaimer.html's Intellectual Property and Enquiries sections (developer name, NAP block,
+   registered address) — don't assume it's purely boilerplate.
 5. **YouTube channel link** in the footer (`youtube.com/@thomson-reserve`) — still points to
    Thomson Reserve's real channel; needs a real Chuan Grove channel or removal.
 6. Everything still marked `TBC`: TOP/launch date, GBP Place ID, social handles, NAP phone
@@ -223,9 +234,8 @@ pending so nobody mistakes a partial pass for a finished, publish-ready site.
 
 ## Suggested next step
 
-Only 3 generic pages remain: `disclaimer.html`, `privacy-policy.html`, `sitemap.html`.
-`disclaimer.html` is the natural next target — legal disclaimer pages often restate the NAP
-block, developer name and entity details verbatim, so it's worth checking closely rather than
-assuming it's purely boilerplate. After that, the 8 inherited content pages (item 3 above) are
-the last major remaining body of work — they need a genuine new topical map for Chuan Grove,
-not a find-replace pass, per Section 5 of the checklist.
+Only 2 generic pages remain: `privacy-policy.html`, `sitemap.html`. `privacy-policy.html` is the
+natural next target — check it as closely as disclaimer.html, since privacy policies commonly
+restate the data controller's legal entity name and contact details verbatim. After that, the 8
+inherited content pages (item 3 above) are the last major remaining body of work — they need a
+genuine new topical map for Chuan Grove, not a find-replace pass, per Section 5 of the checklist.
