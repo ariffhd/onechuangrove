@@ -204,6 +204,21 @@ pending so nobody mistakes a partial pass for a finished, publish-ready site.
   text — checked payment-scheme.html and housing-loan-information.html for the same issue (both
   were already correct) and fixed it here. Visually confirmed both badges now render correctly.
 
+**privacy-policy.html — full rewrite (confirmed the pattern from disclaimer.html again)**
+- Standard head/sticky-bar/footer fixes. Same category of real entity-specific content found:
+  the Introduction's legal-highlight and the Disclosure of Personal Data section both named
+  "Tamarind Development Pte. Ltd. — a joint venture of UOL Group, Singapore Land Group and
+  CapitaLand Development" as the site operator / data recipient (corrected to Chuan Grove Pte.
+  Ltd. / Sing Holdings Residential / Sunway Developments). The Data Protection Officer contact
+  block named the wrong entity and asserted specific confirmed showflat hours
+  ("Monday-Sunday, 10:00am-7:00pm") as fact — corrected entity, replaced hours with honest [TBC].
+  General PDPA clauses (data collected, retention, rights, cookies, security) are generic and
+  accurate — left as-is.
+- **Repeated the footer dev-badge color-style mistake from disclaimer.html, then caught and
+  fixed it inline before committing** — worth noting as a pattern to watch for on any remaining
+  page using this same footer edit sequence. Visually confirmed both badges and the DPO contact
+  block render correctly.
+
 ## ⚠️ NOT done — needs manual content work, not find-replace
 
 1. **Same "$810M en bloc" / "1,268 units / 6 towers" narrative still appears in OTHER sections of
@@ -220,12 +235,11 @@ pending so nobody mistakes a partial pass for a finished, publish-ready site.
    `thomson-reserve-vs-jadescape.html`) are Thomson Reserve's topical-map cluster articles — real
    facts about a different location, each with their own JSON-LD still untouched. Per Section 5,
    Chuan Grove needs its own fresh topical map. Left in place, unlinked from anywhere new.
-4. **Only 2 generic pages left untouched**: `privacy-policy.html`, `sitemap.html`. (The site has
-   26 HTML files total: 16 now fully rewritten, 8 are the "inherited content pages" tracked
-   separately at item 3 above, leaving these 2.) `privacy-policy.html` in particular may have
-   Thomson-specific legal/entity references worth checking closely, per the pattern found in
-   disclaimer.html's Intellectual Property and Enquiries sections (developer name, NAP block,
-   registered address) — don't assume it's purely boilerplate.
+4. **Only 1 generic page left untouched**: `sitemap.html`. (The site has 26 HTML files total: 17
+   now fully rewritten, 8 are the "inherited content pages" tracked separately at item 3 above,
+   leaving this 1.) A sitemap page is more likely to be purely a list of links than to carry
+   entity-specific prose, but check its footer/JSON-LD/sticky-bar for the same recurring
+   landmines regardless.
 5. **YouTube channel link** in the footer (`youtube.com/@thomson-reserve`) — still points to
    Thomson Reserve's real channel; needs a real Chuan Grove channel or removal.
 6. Everything still marked `TBC`: TOP/launch date, GBP Place ID, social handles, NAP phone
@@ -234,8 +248,10 @@ pending so nobody mistakes a partial pass for a finished, publish-ready site.
 
 ## Suggested next step
 
-Only 2 generic pages remain: `privacy-policy.html`, `sitemap.html`. `privacy-policy.html` is the
-natural next target — check it as closely as disclaimer.html, since privacy policies commonly
-restate the data controller's legal entity name and contact details verbatim. After that, the 8
-inherited content pages (item 3 above) are the last major remaining body of work — they need a
-genuine new topical map for Chuan Grove, not a find-replace pass, per Section 5 of the checklist.
+`sitemap.html` is the last generic page — a quick pass should close it out. After that, the only
+remaining major body of work is the 8 inherited content pages (item 3 above), which need a
+genuine new topical map for Chuan Grove per Section 5 of the checklist, not a find-replace pass —
+and the still-untouched sections of index.html itself (item 1 above: Latest Updates feed,
+Timeline to Launch, Project Details table, Connectivity, Investment Thesis, Family & Lifestyle,
+Live Inventory Monitor, Resource Hub). Worth discussing with the user which to prioritize next,
+since both are substantial content-writing efforts rather than quick landmine sweeps.
