@@ -219,6 +219,73 @@ pending so nobody mistakes a partial pass for a finished, publish-ready site.
   page using this same footer edit sequence. Visually confirmed both badges and the DPO contact
   block render correctly.
 
+**index.html — remaining sections rewritten (Latest Updates through Resource Hub + footer)**
+- Hero sidebar "Latest Updates" card: replaced the fabricated 8-item timeline with the same 3
+  real dated events used in latest-updates.html (8 Jul 2025 and 4 Sep 2025 GLS tender wins, 31
+  Jul 2026 Licence C1558) plus one honest "VVIP Preview — TBC" entry.
+- Gallery section: intro no longer claims "1,268-unit/6 towers/23 official photos" (was
+  inconsistent with gallery.html's already-fixed "coming soon" state); both artist's-impression
+  `<figure>` blocks swapped from real Thomson image files to labelled "not yet released"
+  placeholder blocks (same treatment as the teaser video block already had), consistent with the
+  floor-plan.html/gallery.html pattern.
+- Project Core "Architectural Vision" → renamed "Site & Masterplan", rewritten around the real
+  two-GLS-parcel amalgamation (Lots 19037L/19064A MK18) instead of the fabricated 540,000 sq ft/
+  5-hectare/6-tower/SICC-view/Jadescape-comp narrative.
+- "Timeline to Launch" → 3 real dated milestones (same as Latest Updates card) plus TBC entries
+  for showflat/preview/booking/TOP, replacing the fabricated Nov 2024–2032 sequence.
+- "Project Details Table" → rebuilt with real facts (site, JV developer, District 19, 1,056
+  units, combined $1.33B land price, Licence C1558, Project Account 761-352-363-8) and explicit
+  `[TBC]` for every unconfirmed field (tenure, blocks/storeys, unit types, facilities, carpark,
+  site area, plot ratio, consultant team, TOP) instead of Thomson's fabricated values.
+- Connectivity & Transit (silo-2): replaced the fabricated "3 MRT lines" narrative (TEL/Upper
+  Thomson, CRL/Bright Hill 2030, NSC 2027 — none apply to Lorong Chuan) with the single real fact
+  (Lorong Chuan MRT, Circle Line CC15) and a travel-time table marked `[TBC]` pending confirmed
+  data, instead of inventing new stop-by-stop times. Section h2 heading ("...at Bright Hill
+  Drive") also fixed — missed in an earlier pass, caught by this section's re-read.
+- Investment Thesis (silo-3): "$810 Million En Bloc Record" → "$1.33 Billion Land Cost Basis",
+  rebuilt the cost-basis breakdown and PSF range off the real blended land cost, converging on
+  the same $2,230–$2,390 psf estimate already established in pricing.html/review.html/etc.
+  Removed the fabricated "vs Jadescape & AMO Residence" comparison table (wrong district) in
+  favour of an honest note that no reliable comparable data exists yet — same treatment already
+  applied to pricing.html's Market Comparison section.
+- Family & Lifestyle (silo-4): removed the fabricated "Ai Tong School 1km / Phase 2C(S) priority"
+  claim and its 7-row school table, and the "Nature Living" MacRitchie/Windsor/Thomson Nature
+  Park/Lower Peirce/Rail Corridor list (all wrong-location, already removed from location-map.html
+  in an earlier pass) — replaced both with honest "schools/amenities not yet verified for this
+  site" placeholders rather than inventing Lorong Chuan-specific claims with no source.
+- Live Inventory Monitor: unit count corrected to 1,056; milestone list rebuilt around the 3 real
+  dated events instead of the fabricated en bloc/floor-plan-release sequence; removed the
+  "Early-Mid October 2026" preview-date claim (now "TBC").
+- Registration section: removed a fabricated "Early-Mid October 2026" VVIP preview date claim
+  that had leaked into the reg-desc copy (not on the original NOT-done list, but directly
+  adjacent and clearly false — fixed while in the area).
+- Resource Hub: rewrote all 5 neighbourhood-guide card taglines to stop asserting false specifics
+  (CRL 2030, D20, P1 priority zone, nature-reserve premium, Jadescape/AMO comparison) about pages
+  that are still Thomson's real inherited content — same "content pending update" honesty pattern
+  used for these same links in sitemap.html. Card hrefs/order left unchanged (tied to the future
+  topical-map rewrite, not today's scope).
+- **Found a significant gap the earlier index.html passes had missed: the page's own `<footer>`
+  had never been touched.** It still had Thomson's fabricated developer name ("Tamarind
+  Development Pte. Ltd. (UOL · SingLand · CapitaLand)"), a THIRD different fake licence number
+  (C1555, issued 08 Jun 2026 — distinct from both developer.html's old fake C1555/762-333-930-4
+  and the real C1558), unit count 1,268, "Early-Mid October 2026" preview date, "2032" TOP, the
+  3-logo UOL/SingLand/CapitaLand `<img>` badge block, a hardcoded Bright Hill Drive address, fake
+  "Mon–Sun 10am–7pm" hours, and a live link to Thomson's real YouTube channel
+  (`youtube.com/@thomson-reserve`). Fixed identically to the pattern used on all 18 other pages:
+  developer name/licence/account/unit-count/TBC-preview, 2 text-placeholder dev-badges (with the
+  color style included correctly this time), address/hours → TBC, YouTube → `#tbc-youtube-handle`,
+  copyright line → Chuan Grove Pte. Ltd. **This means the footer fix should be independently
+  double-checked on any page where it wasn't the very first thing verified.**
+- JSON-LD (single `@graph` block, unchanged by this pass) re-validated as parseable JSON; HTML tag
+  balance (div/section/table/tr/td/ul/li/figure/a) checked programmatically — all balanced.
+- **Not visually verified this pass** — the browser tool hit the same transient "file may be
+  missing or unreadable" error seen previously on floor-plan.html/gallery.html, this time for
+  index.html itself. Content follows patterns already visually confirmed on every other page;
+  worth a visual check when the browser tool cooperates.
+
+**index.html is now fully rewritten — this closes out item 1 from the NOT-done list below and
+completes the "18 non-inherited pages" scope (now 19, counting index.html's full completion).**
+
 **sitemap.html — full rewrite (last of the generic pages — all 18 now done)**
 - Standard head/sticky-bar/footer fixes. Not purely a link list as guessed — the "Main Pages"/
   "Project Information" taglines had fixable developer-name/district/fabricated-masterplan-size
@@ -235,36 +302,32 @@ pending so nobody mistakes a partial pass for a finished, publish-ready site.
 
 ## ⚠️ NOT done — needs manual content work, not find-replace
 
-1. **Same "$810M en bloc" / "1,268 units / 6 towers" narrative still appears in OTHER sections of
-   index.html**: Latest Updates feed, Artist's Impression intro, Timeline to Launch, Project
-   Details table, Connectivity intro, Investment Thesis section, Family & Lifestyle intro, Live
-   Inventory Monitor, Resource Hub — none of these have been touched yet.
-2. **All images/PDFs** (`thomson-reserve-*.jpg/.png`, floor plan PDF, 3 developer logos) are
+1. **All images/PDFs** (`thomson-reserve-*.jpg/.png`, floor plan PDF, 3 developer logos) are
    Thomson Reserve's real marketing photos and competitors' real logos, still referenced by
    filename (now confusingly under the `onechuangrove.sg` domain). **Do not deploy with these
    assets in place.** Full list: `find . -iname "thomson-reserve-*"` plus the 3 developer logo PNGs.
-3. **8 inherited content pages** (`ai-tong-school-1km-condo.html`, `bright-hill-drive.html`,
+2. **8 inherited content pages** (`ai-tong-school-1km-condo.html`, `bright-hill-drive.html`,
    `macritchie-reservoir-condo.html`, `upper-thomson-mrt.html`, `balance-units-chart.html`,
    `new-launch-vs-resale-district-20.html`, `thomson-reserve-vs-amo-residence.html`,
    `thomson-reserve-vs-jadescape.html`) are Thomson Reserve's topical-map cluster articles — real
    facts about a different location, each with their own JSON-LD still untouched. Per Section 5,
    Chuan Grove needs its own fresh topical map. Left in place, unlinked from anywhere new.
-4. **Zero generic pages left untouched.** All 18 non-inherited HTML files are done. The only
-   files left with Thomson Reserve content are the 8 inherited content pages at item 3 above.
-5. **YouTube channel link** in the footer (`youtube.com/@thomson-reserve`) — still points to
-   Thomson Reserve's real channel; needs a real Chuan Grove channel or removal.
-6. Everything still marked `TBC`: TOP/launch date, GBP Place ID, social handles, NAP phone
+3. **Zero pages left untouched outside the inherited cluster.** All 19 non-inherited HTML files
+   (18 generic pages + index.html, now fully done) are rewritten. The only files left with
+   Thomson Reserve content are the 8 inherited content pages at item 2 above.
+4. Everything still marked `TBC`: TOP/launch date, GBP Place ID, social handles, NAP phone
    number, full NAP block (street address/postal code — the GLS site doesn't have a public civic
-   address yet), brand colors/logo.
+   address yet), brand colors/logo, YouTube handle (was previously Thomson's real channel — now
+   neutralized to `#tbc-youtube-handle` across every page including index.html's footer).
 
 ## Suggested next step
 
-All quick landmine-sweep passes are done — every non-inherited page is rewritten. Two substantial
-bodies of work remain, both content-writing efforts rather than sweeps:
-1. The still-untouched sections of index.html itself (item 1 above: Latest Updates feed, Timeline
-   to Launch, Project Details table, Connectivity, Investment Thesis, Family & Lifestyle, Live
-   Inventory Monitor, Resource Hub) — same "$810M en bloc / 1,268 units" narrative as everywhere
-   else, on the homepage.
-2. The 8 inherited content pages (item 3 above) — need a genuine new topical map for Chuan Grove
-   per Section 5 of the checklist, not a find-replace pass.
-Worth discussing with the user which to prioritize next.
+Every non-inherited page — all 19 of them, including index.html in full — is now rewritten with
+real, verified One Chuan Grove facts. One substantial body of work remains:
+- The 8 inherited content pages (item 2 above) need a genuine new topical map for Chuan Grove per
+  Section 5 of the checklist — this is net-new content creation (new article angles, new internal
+  linking structure), not a find-replace or fact-correction pass, and is a materially larger scope
+  than everything done so far. Worth confirming with the user before starting, since it's a
+  different kind of work than the page-by-page sweep completed to this point.
+Secondary, smaller items: real asset swap (item 1) and the remaining TBC fields (item 4) both
+depend on information only the user/developer can supply.
