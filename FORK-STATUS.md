@@ -183,6 +183,14 @@ pending so nobody mistakes a partial pass for a finished, publish-ready site.
   the same fake schedule. NPS stage percentages, CPF rules, and the calculator are generic
   Singapore regulatory content — left as-is. Visually confirmed the table renders correctly.
 
+**housing-loan-information.html — full rewrite (light pass, last of the 3 Financing pages)**
+- Standard head/sticky-bar/footer fixes. Fixed/floating rate section asserted a fabricated
+  "foundation stage (est. 2027)... 6-year construction timeline to TOP (2032)" — softened to
+  describe the general mortgage disbursement mechanism without inventing dates. LTV limits,
+  TDSR rules, HDB upgrader guidance and the loan calculator are generic Singapore regulatory
+  content — left as-is. Visually confirmed. **All 3 Financing pages (stamp-duty, payment-scheme,
+  housing-loan-information) now done.**
+
 ## ⚠️ NOT done — needs manual content work, not find-replace
 
 1. **Same "$810M en bloc" / "1,268 units / 6 towers" narrative still appears in OTHER sections of
@@ -199,17 +207,14 @@ pending so nobody mistakes a partial pass for a finished, publish-ready site.
    `thomson-reserve-vs-jadescape.html`) are Thomson Reserve's topical-map cluster articles — real
    facts about a different location, each with their own JSON-LD still untouched. Per Section 5,
    Chuan Grove needs its own fresh topical map. Left in place, unlinked from anywhere new.
-4. **12 other HTML pages** (`housing-loan-information.html`, `disclaimer.html`,
-   `privacy-policy.html`, `sitemap.html`, etc.) — only `index.html`, `developer.html`,
-   `pricing.html`, `faq.html`, `showflat.html`, `contact.html`, `location-map.html`,
-   `site-plan.html`, `floor-plan.html`, `gallery.html`, `review.html`, `latest-updates.html`,
-   `stamp-duty.html` and `payment-scheme.html` have been touched so far. Each has its own body
-   copy, sticky top bar (still says "D20"/old preview date on every untouched page), footer, and
-   JSON-LD still carrying Thomson Reserve facts — and each should be checked for its own
-   hard-coded licence/account numbers, its own Web3Forms access_key if it has a lead-capture
-   form, any embedded Google Maps iframe (see the wrong-pin finding above), and any real
-   confirmed-looking data (floor plan sizes, photos, dated milestones) inherited from Thomson's
-   actual history.
+4. **Only 3 generic pages left untouched**: `disclaimer.html`, `privacy-policy.html`,
+   `sitemap.html`. (The site has 26 HTML files total: 15 now fully rewritten, 8 are the
+   "inherited content pages" tracked separately at item 3 above, leaving these 3.) Each should
+   get the same sticky-bar/footer/JSON-LD/logo-text-sub fixes as every other page, checked for
+   its own hard-coded licence/account numbers, Web3Forms access_key, embedded Google Maps
+   iframe, and any real confirmed-looking data inherited from Thomson's actual history —
+   `disclaimer.html` and `privacy-policy.html` in particular may have Thomson-specific legal/
+   entity references worth checking closely (developer name, NAP block, registered address).
 5. **YouTube channel link** in the footer (`youtube.com/@thomson-reserve`) — still points to
    Thomson Reserve's real channel; needs a real Chuan Grove channel or removal.
 6. Everything still marked `TBC`: TOP/launch date, GBP Place ID, social handles, NAP phone
@@ -218,6 +223,9 @@ pending so nobody mistakes a partial pass for a finished, publish-ready site.
 
 ## Suggested next step
 
-`housing-loan-information.html` is a natural next target — the last of the three Financing
-dropdown pages, likely the same light pass as stamp-duty.html and payment-scheme.html (mostly
-generic Singapore loan/TDSR content plus the recurring footer/sticky-bar landmines).
+Only 3 generic pages remain: `disclaimer.html`, `privacy-policy.html`, `sitemap.html`.
+`disclaimer.html` is the natural next target — legal disclaimer pages often restate the NAP
+block, developer name and entity details verbatim, so it's worth checking closely rather than
+assuming it's purely boilerplate. After that, the 8 inherited content pages (item 3 above) are
+the last major remaining body of work — they need a genuine new topical map for Chuan Grove,
+not a find-replace pass, per Section 5 of the checklist.
