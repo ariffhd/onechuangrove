@@ -368,6 +368,49 @@ every `href` to an `onechuangrove.sg/*.html` page resolves to a file that actual
   fork (the real file is `review.html`) — a leftover from the original Section 1 mechanical pass
   that nothing had caught until this sweep.
 
+**Repositioning — the site now speaks as the developer, not an agency marketing the project (2026-09-21)**
+
+The site is meant to represent the developer (Chuan Grove Pte. Ltd. — Sing Holdings Residential /
+Sunway Developments), not a third-party agency. The Thomson Reserve scaffold and my earlier passes
+had a lot of agent/analyst-style copy, which this pass removed sitewide. The voice rule going
+forward: "we" = the developer; unknown facts read "to be announced", never "reported" / "not yet
+verified"; no analyst estimates, no competitor comparisons, no buyer-coaching.
+
+- **Removed 4 third-party-style pages** (recoverable from git history): `review.html` (independent
+  "is it worth buying?" review), `one-chuan-grove-vs-chuan-park.html`,
+  `new-launch-vs-resale-district-19.html`, `district-19-new-launch-price-guide.html`. Removed from
+  sitemap.html / sitemap.xml and the homepage hub. This supersedes the topical-map notes above for
+  those four pages; the other four topical-map pages (MRT, site, schools, lifestyle) were kept and
+  rewritten in developer voice.
+- **`pricing.html` rewritten** — it was publishing the developer's own margin (20–25%), a
+  breakeven table and an "analyst" PSF estimate ($2,230–$2,390). Now a plain "pricing to be
+  announced at the VVIP preview" page. The PSF estimate is gone from every page (index, FAQ,
+  showflat, JSON-LD).
+- **Homepage**: removed the Investment Thesis section; hero "Land Price" badge → "Total Units";
+  land price / psf ppr / bid-margin details removed everywhere; "Resource Hub" → "Location";
+  press-style "GLS Story" section → developer-voice "About the Site"; removed the misleading
+  auto-updating "Last Updated" date and Thomson og:image/JSON-LD image references.
+- **Removed agent-style pitches sitewide**: "no commission payable", "direct developer price",
+  "1-hour response", "first-come first-served", "request a specific sales consultant",
+  buyer-coaching content (floor-plan "how to evaluate", balance-units "pre-launch checklist",
+  site-plan "stack analysis"), and "What the consortium means for buyers" on developer.html.
+- **Removed leaked fork notes from public pages** ("PLACEHOLDER — inherited from Thomson Reserve
+  scaffold", "previous version of this page displayed…", "removed rather than left in place…").
+  These now read as normal "coming soon" copy.
+- **Caught inherited falsehoods that earlier passes missed**: showflat.html still said "4 show unit
+  floor plans are out now" and showed the PSF/breakeven card; contact.html had a leftover broken
+  fragment; sitemap.xml pointed at `thomson-reserve-showflat.html` (real file: `showflat.html`) and
+  omitted `gallery.html`/`faq.html` — regenerated from the real page list. faq.html also had a
+  pre-existing unclosed `<section>`/`<div>` around the registration form, now fixed.
+- FAQ regenerated (visible list + JSON-LD from one source, 19 Q&As); en-bloc/land-price/tender
+  competitiveness/"what was it called before" questions dropped.
+- Unverified claims removed rather than restated: "10-minute walk", "one street from the CTE",
+  "99-year leasehold" (tenure is not confirmed), "five blocks up to 27 storeys".
+- **Voice-check needs a human**: facts only the developer knows (tenure, blocks/storeys, unit mix,
+  TOP, walking time to the MRT, address, showflat hours, phone) now read "to be announced". Fill
+  these in once known. Also worth deciding: the FORK-STATUS.md file itself documents the Thomson
+  Reserve fork — consider keeping it out of a public repo.
+
 ## ⚠️ NOT done — needs manual content work, not find-replace
 
 1. **All images/PDFs** (`thomson-reserve-*.jpg/.png`, floor plan PDF, 3 developer logos) are
