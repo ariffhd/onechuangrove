@@ -440,6 +440,23 @@ verified"; no analyst estimates, no competitor comparisons, no buyer-coaching.
 - The embedded Google Map still shows the Lorong Chuan MRT area (OneMap/Google could not resolve the
   new postal code 556860 at the time); switch it to the address once it resolves.
 
+**Map, floor-plan evaluation and pricing analysis restored (2026-10-09)**
+- Location map + contact page now embed the real One Chuan Grove Google place
+  (https://maps.app.goo.gl/n12GirinuRyyPE557 → 1.350685, 103.8611385); "Open in Google Maps" link added.
+  Schema `geo` + `hasMap` restored with those coordinates (homepage ApartmentComplex + LocalBusiness).
+  Note: the preview browser rendered the embed as a grey pane; the embed endpoint itself responds correctly.
+- `floor-plan.html`: "What to Look For — How to Evaluate the One Chuan Grove Floor Plans" restored
+  (6 evaluation cards), at the owner's request. Removed the "priced above $2M" line (price unknown).
+- `pricing.html`: restored **Indicative Launch PSF Range** ($2,230–$2,390), **Breakeven Analysis** and
+  **Market Comparison**, at the owner's request. These supersede the earlier "pricing TBA only" page.
+  Framing: the range is a *cost-based floor* (land $1,331–$1,376 psf ppr + ~$380 construction + ~$150
+  fees + 20–25% margin), explicitly "not an official price".
+- **Review before relying on the numbers:** the cost-based floor sits BELOW nearby actual sales.
+  Market Comparison uses sourced figures: Chuan Park launched Nov 2024 at ~$2,579 psf avg (EdgeProp), recent
+  transactions ~$2,570–$2,650 (range $2,299–$2,793); The Scala resale ~$1,858–$2,544 (PropertyGuru).
+  Third-party sites estimate One Chuan Grove at $2,350–$3,200 psf. Publishing a range far below the
+  eventual launch price, or the developer's own margin assumption, is a commercial decision for the owner.
+
 ## ⚠️ NOT done — needs manual content work, not find-replace
 
 1. **All images/PDFs** (`thomson-reserve-*.jpg/.png`, floor plan PDF, 3 developer logos) are
