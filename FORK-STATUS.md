@@ -411,6 +411,20 @@ verified"; no analyst estimates, no competitor comparisons, no buyer-coaching.
   these in once known. Also worth deciding: the FORK-STATUS.md file itself documents the Thomson
   Reserve fork — consider keeping it out of a public repo.
 
+**Contact number + new colour scheme (2026-10-09)**
+- Mobile/WhatsApp set to **+65 8075 5946** everywhere (`tel:`, `wa.me/6580755946`, JSON-LD `telephone`,
+  visible text on all 22 pages). The phone number is no longer a TBC item.
+- Colour scheme changed because the inherited dark-green + gold on cream was too close to
+  thomson-reserves.sg. New palette: **deep navy** (`#17243f` / `#0b1526`) + **copper** accent
+  (`#c0714a`, light `#f0b793`) on a **cool off-white** (`#f4f6f8` / `#e5eaf0`), with cool-grey text.
+  Applied by mapping the CSS variables and every hardcoded rgba/hex; green is kept only where it is
+  semantic (WhatsApp button, "live"/success status).
+- Header logo mark changed from "TR" (Thomson Reserve's initials) to "OC".
+- Still shared with the Thomson Reserve site: fonts (Cormorant Garamond + Jost) and the overall page
+  layout. If it still feels too similar, changing the typeface is the next lever.
+- Also cleaned up the remaining visible "[TBC: full address]" / "[TBC: showflat hours]" footer text on
+  14 pages (now "address to be announced" / "opening hours: to be announced").
+
 ## ⚠️ NOT done — needs manual content work, not find-replace
 
 1. **All images/PDFs** (`thomson-reserve-*.jpg/.png`, floor plan PDF, 3 developer logos) are

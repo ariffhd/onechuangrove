@@ -9,7 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 
-  :root{--forest:#1a2e1e;--forest-deep:#0f1c12;--gold:#c4a050;--gold-light:#e8c882;--cream:#f9f5ee;--cream-dark:#f0e9d8;--text-dark:#1a1a18;--text-mid:#3d3d38;--text-light:#7a7a70;--text-faint:#aaa89e;--white:#ffffff;--border:rgba(196,160,80,0.18);--border-light:rgba(196,160,80,0.1);}
+  :root{--forest:#17243f;--forest-deep:#0b1526;--gold:#c0714a;--gold-light:#f0b793;--cream:#f4f6f8;--cream-dark:#e5eaf0;--text-dark:#141a26;--text-mid:#3a4455;--text-light:#6a7587;--text-faint:#a2abb9;--white:#ffffff;--border:rgba(192,113,74,0.18);--border-light:rgba(192,113,74,0.1);}
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
   html{scroll-behavior:smooth;}
   body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text-dark);font-size:16px;line-height:1.7;overflow-x:hidden;}
@@ -44,8 +44,8 @@
   .nav-cta{background:var(--forest);color:var(--gold-light)!important;padding:10px 18px!important;height:auto!important;line-height:normal!important;font-size:11px!important;letter-spacing:0.12em!important;border:1px solid transparent;transition:background 0.2s!important;}
   .nav-cta:hover{background:var(--forest-deep)!important;}
   .nav-cta::after{display:none!important;}
-  .page-hero{background:linear-gradient(165deg,var(--forest-deep) 0%,#1a3a22 50%,#0f2a18 100%);padding:80px 0 72px;position:relative;overflow:hidden;}
-  .page-hero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(196,160,80,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(196,160,80,0.03) 1px,transparent 1px);background-size:60px 60px;pointer-events:none;}
+  .page-hero{background:linear-gradient(165deg,var(--forest-deep) 0%,#1d3557 50%,#10213c 100%);padding:80px 0 72px;position:relative;overflow:hidden;}
+  .page-hero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(192,113,74,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(192,113,74,0.03) 1px,transparent 1px);background-size:60px 60px;pointer-events:none;}
   .page-hero-inner{max-width:1280px;margin:0 auto;padding:0 40px;position:relative;z-index:2;}
   .breadcrumb{display:flex;align-items:center;gap:8px;margin-bottom:28px;}
   .breadcrumb a{font-size:11px;letter-spacing:0.1em;color:rgba(255,255,255,0.35);text-decoration:none;text-transform:uppercase;}
@@ -74,16 +74,16 @@
   .data-table thead{background:var(--forest);}
   .data-table thead th{padding:13px 16px;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);text-align:left;font-weight:600;}
   .data-table tbody tr{border-bottom:1px solid var(--border-light);}
-  .data-table tbody tr:hover td{background:rgba(196,160,80,0.04);}
+  .data-table tbody tr:hover td{background:rgba(192,113,74,0.04);}
   .data-table tbody td{padding:14px 16px;font-size:14px;color:var(--text-mid);}
   .data-table tbody td:first-child{font-weight:500;color:var(--text-dark);}
   .dark-table .data-table thead th{color:var(--gold);}
   .dark-table .data-table tbody tr{border-bottom-color:rgba(255,255,255,0.08);}
   .dark-table .data-table tbody td{color:rgba(255,255,255,0.75);}
   .dark-table .data-table tbody td:first-child{color:var(--white);font-weight:500;}
-  .dark-table .data-table tbody tr.highlight td{background:rgba(196,160,80,0.12);color:var(--gold-light);font-weight:600;}
+  .dark-table .data-table tbody tr.highlight td{background:rgba(192,113,74,0.12);color:var(--gold-light);font-weight:600;}
   .dark-table .data-table tbody tr:hover td{background:rgba(255,255,255,0.05);}
-  .data-table tbody tr.highlight td{background:rgba(196,160,80,0.07);font-weight:600;color:var(--forest);}
+  .data-table tbody tr.highlight td{background:rgba(192,113,74,0.07);font-weight:600;color:var(--forest);}
   /* SHOW UNIT FLOOR PLAN CARDS */
   .fp-released-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(76,175,110,0.1);border:1px solid rgba(76,175,110,0.3);padding:8px 20px;font-size:11px;letter-spacing:0.14em;color:#2e8b57;text-transform:uppercase;font-weight:600;margin-bottom:28px;}
   .fp-released-dot{width:7px;height:7px;border-radius:50%;background:#4caf6e;animation:pulse 2s infinite;flex-shrink:0;}
@@ -107,14 +107,14 @@
   @media(max-width:768px){ .fp-grid{grid-template-columns:1fr;} }
   /* PLACEHOLDER BOX */
   .placeholder-box{background:var(--forest);padding:60px 40px;text-align:center;position:relative;overflow:hidden;}
-  .placeholder-box::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(196,160,80,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(196,160,80,0.04) 1px,transparent 1px);background-size:40px 40px;}
+  .placeholder-box::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(192,113,74,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(192,113,74,0.04) 1px,transparent 1px);background-size:40px 40px;}
   .placeholder-box-inner{position:relative;z-index:1;}
   .placeholder-icon{font-size:48px;margin-bottom:20px;opacity:0.4;}
   .placeholder-title{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:400;color:var(--white);margin-bottom:12px;}
   .placeholder-text{font-size:14px;color:rgba(255,255,255,0.5);line-height:1.75;max-width:520px;margin:0 auto 28px;font-weight:300;}
-  .placeholder-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(196,160,80,0.12);border:1px solid rgba(196,160,80,0.3);padding:8px 20px;font-size:11px;letter-spacing:0.14em;color:var(--gold);text-transform:uppercase;font-weight:500;margin-bottom:32px;}
-  .milestone-strip{display:flex;flex-wrap:wrap;justify-content:center;gap:0;border:1px solid rgba(196,160,80,0.15);margin-top:32px;}
-  .ms-item{padding:14px 20px;text-align:center;border-right:1px solid rgba(196,160,80,0.1);}
+  .placeholder-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(192,113,74,0.12);border:1px solid rgba(192,113,74,0.3);padding:8px 20px;font-size:11px;letter-spacing:0.14em;color:var(--gold);text-transform:uppercase;font-weight:500;margin-bottom:32px;}
+  .milestone-strip{display:flex;flex-wrap:wrap;justify-content:center;gap:0;border:1px solid rgba(192,113,74,0.15);margin-top:32px;}
+  .ms-item{padding:14px 20px;text-align:center;border-right:1px solid rgba(192,113,74,0.1);}
   .ms-item:last-child{border-right:none;}
   .ms-dot{width:8px;height:8px;border-radius:50%;margin:0 auto 6px;}
   .ms-dot.done{background:#4caf6e;}
@@ -130,14 +130,14 @@
   .reg-benefits{list-style:none;display:flex;flex-direction:column;gap:12px;margin-bottom:28px;}
   .reg-benefits li{display:flex;align-items:flex-start;gap:12px;font-size:14px;color:rgba(255,255,255,0.6);font-weight:300;}
   .reg-benefits li::before{content:'✓';color:var(--gold);font-weight:700;font-size:13px;flex-shrink:0;margin-top:2px;}
-  .reg-trust{display:flex;gap:20px;flex-wrap:wrap;padding-top:24px;border-top:1px solid rgba(196,160,80,0.12);}
+  .reg-trust{display:flex;gap:20px;flex-wrap:wrap;padding-top:24px;border-top:1px solid rgba(192,113,74,0.12);}
   .trust-badge{font-size:10px;letter-spacing:0.1em;color:rgba(255,255,255,0.35);text-transform:uppercase;display:flex;align-items:center;gap:8px;}
   .trust-badge::before{content:'';width:5px;height:5px;background:var(--gold);border-radius:50%;flex-shrink:0;}
-  .form-card{background:rgba(255,255,255,0.04);border:1px solid rgba(196,160,80,0.2);padding:36px;}
-  .form-title{font-size:10px;letter-spacing:0.22em;color:var(--gold);text-transform:uppercase;font-weight:600;margin-bottom:24px;padding-bottom:14px;border-bottom:1px solid rgba(196,160,80,0.15);}
+  .form-card{background:rgba(255,255,255,0.04);border:1px solid rgba(192,113,74,0.2);padding:36px;}
+  .form-title{font-size:10px;letter-spacing:0.22em;color:var(--gold);text-transform:uppercase;font-weight:600;margin-bottom:24px;padding-bottom:14px;border-bottom:1px solid rgba(192,113,74,0.15);}
   .form-group{margin-bottom:16px;}
   .form-label{display:block;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:7px;font-weight:500;}
-  .form-input,.form-select,.form-textarea{width:100%;background:rgba(255,255,255,0.05);border:1px solid rgba(196,160,80,0.2);color:var(--white);padding:12px 14px;font-family:'Jost',sans-serif;font-size:14px;font-weight:300;outline:none;transition:border-color 0.2s;appearance:none;}
+  .form-input,.form-select,.form-textarea{width:100%;background:rgba(255,255,255,0.05);border:1px solid rgba(192,113,74,0.2);color:var(--white);padding:12px 14px;font-family:'Jost',sans-serif;font-size:14px;font-weight:300;outline:none;transition:border-color 0.2s;appearance:none;}
   .form-input:focus,.form-select:focus,.form-textarea:focus{border-color:var(--gold);}
   .form-input::placeholder{color:rgba(255,255,255,0.2);}
   .form-select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%23c4a050' stroke-width='1.5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;padding-right:32px;background-color:rgba(255,255,255,0.05);}
@@ -162,17 +162,17 @@
   .psf-value{font-family:'Cormorant Garamond',serif;font-size:52px;font-weight:300;color:var(--gold-light);line-height:1;margin-bottom:8px;}
   .psf-sub{font-size:13px;color:rgba(255,255,255,0.4);font-weight:300;}
   .psf-tiers{margin-top:24px;display:flex;flex-direction:column;gap:8px;}
-  .psf-tier{display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:rgba(255,255,255,0.04);border-left:2px solid rgba(196,160,80,0.3);font-size:13px;}
+  .psf-tier{display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:rgba(255,255,255,0.04);border-left:2px solid rgba(192,113,74,0.3);font-size:13px;}
   .psf-tier-label{color:rgba(255,255,255,0.55);font-weight:300;}
   .psf-tier-price{color:var(--gold);font-weight:500;}
-  .note-box{background:rgba(196,160,80,0.07);border-left:3px solid var(--gold);padding:16px 20px;font-size:13px;color:var(--text-mid);line-height:1.7;font-style:italic;}
+  .note-box{background:rgba(192,113,74,0.07);border-left:3px solid var(--gold);padding:16px 20px;font-size:13px;color:var(--text-mid);line-height:1.7;font-style:italic;}
   /* BALANCE UNITS */
   .balance-stat{text-align:center;padding:40px 20px;}
   .balance-stat-n{font-family:'Cormorant Garamond',serif;font-size:64px;font-weight:300;color:var(--gold-light);line-height:1;margin-bottom:8px;}
   .balance-stat-label{font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.4);font-weight:400;}
-  footer{background:var(--forest-deep);padding:64px 0 0;border-top:1px solid rgba(196,160,80,0.12);}
-  .footer-grid{max-width:1280px;margin:0 auto;padding:0 40px 48px;display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:48px;border-bottom:1px solid rgba(196,160,80,0.08);}
-  .footer-col-title{font-size:9px;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:20px;padding-bottom:12px;border-bottom:1px solid rgba(196,160,80,0.12);}
+  footer{background:var(--forest-deep);padding:64px 0 0;border-top:1px solid rgba(192,113,74,0.12);}
+  .footer-grid{max-width:1280px;margin:0 auto;padding:0 40px 48px;display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:48px;border-bottom:1px solid rgba(192,113,74,0.08);}
+  .footer-col-title{font-size:9px;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:20px;padding-bottom:12px;border-bottom:1px solid rgba(192,113,74,0.12);}
   .footer-project-name{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:400;color:var(--white);letter-spacing:0.06em;margin-bottom:16px;}
   .footer-details{list-style:none;display:flex;flex-direction:column;gap:8px;}
   .footer-details li{font-size:12.5px;color:rgba(255,255,255,0.35);font-weight:300;}
@@ -191,8 +191,8 @@
   .whatsapp-fab{position:fixed;bottom:28px;right:28px;width:54px;height:54px;background:#25d366;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 4px 24px rgba(37,211,102,0.35);z-index:999;transition:transform 0.2s;}
   .whatsapp-fab:hover{transform:scale(1.08);}
   .whatsapp-fab svg{width:28px;height:28px;fill:white;}
-  .mobile-sticky{display:none;position:fixed;bottom:0;left:0;right:0;background:var(--forest-deep);border-top:1px solid rgba(196,160,80,0.2);z-index:200;grid-template-columns:repeat(4,1fr);}
-  .mobile-sticky a{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:10px 6px;text-decoration:none;font-size:9px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.5);font-weight:500;border-right:1px solid rgba(196,160,80,0.1);gap:5px;}
+  .mobile-sticky{display:none;position:fixed;bottom:0;left:0;right:0;background:var(--forest-deep);border-top:1px solid rgba(192,113,74,0.2);z-index:200;grid-template-columns:repeat(4,1fr);}
+  .mobile-sticky a{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:10px 6px;text-decoration:none;font-size:9px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.5);font-weight:500;border-right:1px solid rgba(192,113,74,0.1);gap:5px;}
   .mobile-sticky a:last-child{border-right:none;}
   .mobile-sticky a span.ms-icon{font-size:16px;}
   @media(max-width:768px){
@@ -239,7 +239,7 @@
     .qc-pill{width:100% !important;}
     .reg-grid{grid-template-columns:1fr !important;}
     .milestone-strip{flex-direction:column !important;}
-    .ms-item{border-right:none !important;border-bottom:1px solid rgba(196,160,80,0.1);}
+    .ms-item{border-right:none !important;border-bottom:1px solid rgba(192,113,74,0.1);}
     .hero-content{grid-template-columns:1fr !important;gap:32px !important;padding:48px 20px 32px !important;}
     .section-inner,.page-hero-inner,.legal-inner,.policy-wrap,.reg-grid,.cta-strip-inner{padding-left:20px !important;padding-right:20px !important;}
     .topbar{padding:8px 16px !important;font-size:9px !important;gap:8px;}
@@ -306,12 +306,12 @@
 <body>
 <div class="topbar">
   <div><span class="topbar-pulse"></span>VVIP Preview Registration &#8212; Date to be announced</div>
-  <div>New Launch in D19 &nbsp;|&nbsp; <a href="tel:+65[TBC]">+65 [TBC]</a></div>
+  <div>New Launch in D19 &nbsp;|&nbsp; <a href="tel:+6580755946">+65 8075 5946</a></div>
 </div>
 <nav>
   <div class="nav-inner">
     <a href="https://onechuangrove.sg/" class="nav-logo">
-      <div class="logo-mark"><span>TR</span></div>
+      <div class="logo-mark"><span>OC</span></div>
       <div class="logo-text">
         <div class="logo-text-main">One Chuan Grove</div>
         <div class="logo-text-sub">District 19 &middot; Lorong Chuan &middot; Singapore</div>
@@ -466,9 +466,9 @@
     </div>
     <div>
       <div class="footer-col-title">Contact Us</div>
-      <div class="footer-contact-item">One Chuan Grove @ Lorong Chuan, District 19 [TBC: full address]</div>
-      <div class="footer-contact-item">[TBC: showflat hours]</div>
-      <div class="footer-contact-item"><a href="tel:+65[TBC]" style="color:var(--gold);text-decoration:none;">+65 [TBC]</a></div>
+      <div class="footer-contact-item">One Chuan Grove @ Lorong Chuan, District 19 (address to be announced)</div>
+      <div class="footer-contact-item">Opening hours: to be announced</div>
+      <div class="footer-contact-item"><a href="tel:+6580755946" style="color:var(--gold);text-decoration:none;">+65 8075 5946</a></div>
       <div class="footer-contact-item"><a href="mailto:sales@onechuangrove.sg" style="color:rgba(255,255,255,0.4);text-decoration:none;font-size:13px;">sales@onechuangrove.sg</a></div>
       <div class="footer-contact-item" style="gap:16px;margin-top:6px;">
         <a href="#tbc-youtube-handle" target="_blank" rel="noopener" aria-label="One Chuan Grove on YouTube" style="color:rgba(255,255,255,0.4);text-decoration:none;display:inline-flex;align-items:center;gap:6px;font-size:13px;transition:color 0.2s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='rgba(255,255,255,0.4)'"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0;"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.6 31.6 0 0 0 0 12a31.6 31.6 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.6 31.6 0 0 0 24 12a31.6 31.6 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.3 3.6-6.3 3.6Z"/></svg>YouTube</a>
@@ -477,7 +477,7 @@
     </div>
   </div>
   <div class="footer-bottom">
-    <div class="footer-bottom-text">Copyright © 2026 One Chuan Grove · Chuan Grove Pte. Ltd. · +65 [TBC]</div>
+    <div class="footer-bottom-text">Copyright © 2026 One Chuan Grove · Chuan Grove Pte. Ltd. · +65 8075 5946</div>
     <div class="footer-bottom-links">
       <a href="https://onechuangrove.sg/sitemap.html">Sitemap</a>
       <a href="https://onechuangrove.sg/disclaimer.html">Disclaimer</a>
@@ -485,14 +485,14 @@
     </div>
   </div>
 </footer>
-<a href="https://wa.me/TBCPHONE?text=Hi%2C%20I%27m%20interested%20in%20One%20Chuan%20Grove" class="whatsapp-fab" target="_blank">
+<a href="https://wa.me/6580755946?text=Hi%2C%20I%27m%20interested%20in%20One%20Chuan%20Grove" class="whatsapp-fab" target="_blank">
   <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 </a>
 <div class="mobile-sticky">
   <a href="https://onechuangrove.sg/floor-plan.html"><span class="ms-icon">&#128210;</span>Floor Plans</a>
   <a href="https://onechuangrove.sg/pricing.html"><span class="ms-icon">&#128176;</span>Price List</a>
   <a href="https://onechuangrove.sg/balance-units-chart.html"><span class="ms-icon">&#128202;</span>Units</a>
-  <a href="https://wa.me/TBCPHONE" style="background:rgba(37,211,102,0.1);color:#4caf6e;"><span class="ms-icon">&#128172;</span>WhatsApp</a>
+  <a href="https://wa.me/6580755946" style="background:rgba(37,211,102,0.1);color:#4caf6e;"><span class="ms-icon">&#128172;</span>WhatsApp</a>
 </div>
 </body>
 </html>
