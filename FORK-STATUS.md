@@ -425,6 +425,21 @@ verified"; no analyst estimates, no competitor comparisons, no buyer-coaching.
 - Also cleaned up the remaining visible "[TBC: full address]" / "[TBC: showflat hours]" footer text on
   14 pages (now "address to be announced" / "opening hours: to be announced").
 
+**Official address + structured-data cleanup (2026-10-09)**
+- Address is now **1 Chuan Grove, Singapore 556860** — in every schema `PostalAddress` (13 business
+  entities: ApartmentComplex + LocalBusiness), every page footer, the homepage details table, and the
+  copy that previously said "address to be announced / once the site's address is assigned" (those
+  walking-time/distance lines now say "closer to launch" — no distances have been measured yet).
+- Schema `telephone` = `+6580755946` on every LocalBusiness; `contact.html` previously had no business
+  entity at all, so one was added (same `@id` as the homepage's).
+- Removed the `geo` coordinates (they were the Lorong Chuan **MRT's** coordinates, a stand-in that no
+  longer matches the real address). Add the site's exact coordinates once known.
+- Rich Results Test showed `thomson-reserve-*.jpg` as the page `image`: those references were already
+  gone from the code (removed in the developer-voice pass) — the test was reading a stale cached copy
+  of the live homepage (`x-proxy-cache`), not a code problem. Needs a SiteGround cache flush after deploy.
+- The embedded Google Map still shows the Lorong Chuan MRT area (OneMap/Google could not resolve the
+  new postal code 556860 at the time); switch it to the address once it resolves.
+
 ## ⚠️ NOT done — needs manual content work, not find-replace
 
 1. **All images/PDFs** (`thomson-reserve-*.jpg/.png`, floor plan PDF, 3 developer logos) are
